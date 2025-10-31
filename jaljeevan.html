@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/Navbar.css" />
+    <link rel="stylesheet" href="./styles/Homepage.css" />
+    <link rel="stylesheet" href="./styles/Footer.css" />
+    <link rel="stylesheet" href="./styles/JalJeevanMission.css" />
+    <link rel="stylesheet" href="./styles/PopupLogo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Your existing HTML content -->
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 top-bar-left">
+            महाराष्ट्र शासन | GOVERNMENT OF MAHARASHTRA
+          </div>
+          <div
+            class="col-md-6 d-flex justify-content-end align-items-center gap-3 flex-wrap top-bar-right"
+          >
+            <span class="email-text">
+              <i class="fas fa-envelope"></i>
+              wadegaon.stegp@rediffmail.com
+            </span>
+            <div id="google_translate_element"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logo Header -->
+    <div class="logo-header">
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <img
+            src="./Img/main_logo.jpeg"
+            alt="ग्रामपंचायत लोगो"
+            class="logo me-3"
+          />
+          <h2 class="mb-0 marathi-font text-warning">
+            वडेगाव(स्टेशन) ग्रामपंचायत
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark nav-bar">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav nav-main-container">
+            <li class="nav-item">
+              <a class="nav-link active" href="./">
+                <i class="fas fa-home"></i> मुखपृष्ठ
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./members.html">
+                <i class="fas fa-users"></i> पदाधिकारी
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./villageinfo.html">
+                <i class="fas fa-info-circle"></i> गावाची माहिती
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./impnumbers.html">
+                <i class="fas fa-phone-alt"></i> महत्वाचे नंबर
+              </a>
+            </li>
+            <!-- शासकीय योजना Dropdown -->
+            <li class="nav-item dropdown d-flex align-items-center">
+              <a
+                class="nav-link text-white fw-semibold hover-link text-white"
+                href="./fifteen.html"
+              >
+                <i class="fa-solid fa-landmark text-white"></i>
+                शासकीय योजना
+              </a>
+              <a
+                class="nav-link dropdown-toggle text-primary fw-semibold"
+                href="./fifteen.html"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              ></a>
+              <ul class="dropdown-menu dropdown-menu-custom">
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-custom"
+                    href="./fifteen.html"
+                    >१५ वित्त आयोग</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-custom"
+                    href="./jaljeevan.html"
+                    >जल जीवन मिशन</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-custom"
+                    href="./pmyojna.html"
+                    >प्रधान मंत्री आवास योजना</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-custom"
+                    href="./mgandhi.html"
+                    >महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार हमी योजना</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-custom"
+                    href="./tandavasti.html"
+                    >तांडा/वस्ती योजना</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-custom"
+                    href="./scneo.html"
+                    >अनुसूचीत जाती व नवबौध्द विकास</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-custom"
+                    href="./ramaiyojna.html"
+                    >रमाई आवास योजना</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-custom"
+                    href="./shabriyojna.html"
+                    >शबरी आदिवासी घरकुल योजना</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <!-- लाभार्थी रजिस्टर Dropdown -->
+            <li class="nav-item dropdown d-flex align-items-center">
+              <a
+                class="nav-link text-white fw-semibold text-white px-2 hover-link"
+                href="./pmlabh.html"
+              >
+                <i class="fa-solid fa-users-line text-white"></i>
+                लाभार्थी रजिस्टर
+              </a>
+              <a
+                class="nav-link dropdown-toggle text-primary fw-semibold px-1"
+                href="./pmlabh.html"
+                id="navbarDropdown2"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              ></a>
+              <ul class="dropdown-menu dropdown-menu-custom">
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-custom"
+                    href="./pmlabh.html"
+                    >प्रधानमंत्री आवास योजना</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-custom"
+                    href="./shabrilabh.html"
+                    >शबरी आवास योजना</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item dropdown-item-custom"
+                    href="./ramailabh.html"
+                    >रमाई आवास योजना</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./services.html">
+                <i class="fas fa-user-check"></i> नागरिकांसाठी सेवा
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./taxcollect.html">
+                <i class="fas fa-money-bill-wave"></i> कर संकलन
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./complaint.html">
+                <i class="fas fa-comments"></i> तक्रार द्या
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Marquee -->
+    <div class="marquee">
+      <div class="container">
+        <marquee behavior="scroll" direction="left">
+          <i class="fas fa-bullhorn me-2"></i>
+          ग्रामपंचायत मध्ये स्वच्छता अभियान चालू आहे. सर्व नागरिकांनी सहभागी
+          व्हावे.
+        </marquee>
+      </div>
+    </div>
+
+    <!-- Notification -->
+    <div
+      class="alert alert-warning d-flex align-items-center justify-content-center mb-0 rounded-0"
+      data-aos="fade-down"
+    >
+      <i class="fas fa-exclamation-circle me-2 fs-4"></i>
+      <strong>महत्वाची सूचना :</strong>शासकीय योजना संदर्भातील माहिती खाली पाहा.
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="container mt-5 px-4">
+      <!-- Header with Link -->
+      <div
+        class="d-flex justify-content-between align-items-center mb-4 flex-wrap"
+        data-aos="fade-up"
+      >
+        <h1 class="section-title mb-0">शासकीय योजना – जलजीवन मिशन</h1>
+        <a
+          href="https://jaljeevanmission.gov.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-gradient-success text-white fw-bold"
+        >
+          योजना सविस्तर माहिती
+        </a>
+      </div>
+
+      <!-- Jal Jeevan Mission Card -->
+      <div class="card shadow-lg rounded-4 p-3" data-aos="zoom-in">
+        <div class="card-header bg-success text-white fw-bold fs-5">
+          जलजीवन मिशन
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6 mb-3" data-aos="fade-right">
+              <p>
+                <strong>उद्देश:</strong> प्रत्येक ग्रामीण घराण्याला सुरक्षित
+                पाणी पुरवठा करणे.
+              </p>
+              <p><strong>प्रारंभ:</strong> १५ ऑगस्ट २०१९</p>
+              <p>
+                <strong>अधिकार क्षेत्र:</strong> संपूर्ण भारतातील ग्रामीण भाग
+              </p>
+            </div>
+            <div class="col-md-6 mb-3" data-aos="fade-left">
+              <h5 class="mt-3 section-subtitle">योजनेचे मुख्य घटक</h5>
+              <ul class="custom-list">
+                <li>ग्रामीण घरांपर्यंत नळाने पाणी पोहचवणे.</li>
+                <li>जलबिंदू तपासणी व गुणवत्ता सुनिश्चित करणे.</li>
+                <li>
+                  स्मार्ट मीटर व मॉनिटरिंग प्रणालीद्वारे पाणी वापराचे निरीक्षण.
+                </li>
+                <li>ग्रामीण पाणी समित्यांचे प्रशिक्षण आणि क्षमता वाढवणे.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h5 class="mt-3 section-subtitle" data-aos="fade-up">
+            योजनेअंतर्गत कामे
+          </h5>
+          <ul class="custom-list" data-aos="fade-up" data-aos-delay="100">
+            <li>सुरक्षित पाणी साठवणुकीसाठी टाक्या बांधणे.</li>
+            <li>पाणी शुद्धीकरणासाठी आर.ओ. व फिल्ट्रेशन यंत्रणा बसवणे.</li>
+            <li>नळ पाणीपुरवठा नेटवर्क बांधकाम व दुरुस्ती.</li>
+            <li>गावातील जलस्रोताचे संवर्धन व रिचार्ज पद्धती राबवणे.</li>
+          </ul>
+
+          <h5 class="mt-3 section-subtitle text-danger" data-aos="fade-up">
+            खर्च करता न येणाऱ्या बाबी
+          </h5>
+          <ul
+            class="custom-list text-danger"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <li>मानधन, पगार, T.A./D.A.</li>
+            <li>समारंभ, सांस्कृतिक कार्यक्रम, सजावट</li>
+            <li>एकाच प्रकल्पावर दुबार खर्च</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5 class="footer-title" data-aos="fade-right">
+              ग्रामपंचायतीची सर्वसाधारण माहिती
+            </h5>
+            <p data-aos="fade-right">
+              ग्रामपंचायतीचे नाव : वडेगाव(स्टेशन) ग्रामपंचायत <br />
+              स्थापना : 02 ऑक्टोबर 1959 <br />
+              Email ID: wadegaon.stegp@rediffmail.com <br />
+              सेन्सस कोड : 549703 <br />
+              तालुक्यापासून अंतर : 10-12 कि.मी. <br />
+              जिल्हा मुख्यालयापासून अंतर : 90 कि.मी.
+            </p>
+
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/grampanchayt.karyalay.wadegaon.station?rdid=Epd84rOH7LNX90Mh&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15okEv1vHe%2F#"
+                target="_blank"
+                class="facebook"
+                data-aos="fade-right"
+                title="Facebook"
+              >
+                <i class="fab fa-facebook-f" data-aos="fade-right"></i>
+              </a>
+              <a
+                href="https://chat.whatsapp.com/CRiDcV6irtIDIGq2S96yHA"
+                target="_blank"
+                class="whatsapp"
+                data-aos="fade-right"
+                title="Whatsapp"
+              >
+                <i class="fab fa-whatsapp" data-aos="fade-right"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/gpwadegaonsta/?igsh=MXJvaXJjNHZ5N2poMw%3D%3D#"
+                target="_blank"
+                class="instagram"
+                data-aos="fade-right"
+                title="Instagram"
+              >
+                <i class="fab fa-instagram" data-aos="fade-right"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="youtube"
+                data-aos="fade-right"
+                title="YouTube"
+              >
+                <i class="fab fa-youtube" data-aos="fade-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <h5 class="footer-title" data-aos="fade-right">द्रुत लिंक</h5>
+            <div class="quick-links">
+              <a href="./" data-aos="fade-right"> मुख्य पृष्ठ </a>
+              <a href="./villageinfo.html" data-aos="fade-right">
+                ग्रामपंचायती विषयी
+              </a>
+              <a href="./villageinfo.html" data-aos="fade-right">
+                आर्थिक माहिती
+              </a>
+              <a href="./fifteen.html" data-aos="fade-right"> योजना व कामे </a>
+              <a href="./services.html" data-aos="fade-right"> ऑनलाइन सेवा </a>
+              <a href="./#gallery" data-aos="fade-right"> गॅलरी </a>
+              <a href="./impnumbers.html" data-aos="fade-right"> संपर्क </a>
+              <a href="./sitemap.html" data-aos="fade-right"> 🌐 साईटमॅप </a>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <h5 class="footer-title" data-aos="fade-right">संपर्क</h5>
+            <div class="contact-info">
+              <p data-aos="fade-left">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>
+                  ग्रामपंचायत वडेगाव(स्टेशन),
+                  <br />
+                  ता.अर्जुनी/मोरगाव, जि. गोंदिया,
+                  <br />
+                  पिन. ४४१७०१
+                </span>
+              </p>
+              <p data-aos="fade-left">
+                <i class="fas fa-phone-alt"></i>
+                <span>+९१ 9370694651</span>
+              </p>
+              <p data-aos="fade-left">
+                <i class="fas fa-envelope"></i>
+                <span>wadegaon.stegp@rediffmail.com</span>
+              </p>
+              <p data-aos="fade-left">
+                <i class="fas fa-clock"></i>
+                <span>सोम-शनि: ९:०० AM - ५:०० PM</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="copyright text-center mt-4">
+        <div class="container">
+          <p class="mb-2" data-aos="fade-up">
+            © २०२५ वडेगाव(स्टेशन) ग्रामपंचायत. सर्व हक्क राखीव.
+          </p>
+          <p class="mb-2">
+            <span class="visitor-count">
+              <i class="fas fa-eye me-1"></i>
+              <span id="visitorCounter">१२,८९६</span> भेटी
+            </span>
+          </p>
+          <p class="mb-0">
+            Design & Developed By
+            <a href="#" class="developer-link">KUMIRADI INFOTECH </a>
+            [7507962607]
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Accessibility Button -->
+    <button
+      class="accessibility-btn"
+      onclick="toggleAccessibility()"
+      title="Accessibility Options"
+    >
+      <i class="fas fa-universal-access"></i>
+    </button>
+
+    <!-- Accessibility Panel -->
+    <div id="accessibility-panel">
+      <div class="panel-header">
+        <h6>Accessibility Options</h6>
+        <button class="close-panel" onclick="toggleAccessibility()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="accessibility-option">
+        <button class="font-size-btn" onclick="increaseFontSize()">
+          <i class="fas fa-text-height"></i> Increase Text Size
+        </button>
+      </div>
+      <div class="accessibility-option">
+        <button class="font-size-btn" onclick="decreaseFontSize()">
+          <i class="fas fa-text-width"></i> Decrease Text Size
+        </button>
+      </div>
+      <div class="accessibility-option">
+        <button class="contrast-btn" onclick="toggleHighContrast()">
+          <i class="fas fa-adjust"></i> High Contrast
+        </button>
+      </div>
+      <div class="accessibility-option">
+        <button class="font-size-btn" onclick="readAloud()">
+          <i class="fas fa-volume-up"></i> Read Aloud
+        </button>
+      </div>
+      <div class="accessibility-option">
+        <button class="font-size-btn" onclick="stopReading()">
+          <i class="fas fa-stop"></i> Stop Reading
+        </button>
+      </div>
+      <div class="accessibility-option">
+        <button class="reset-btn" onclick="resetAccessibility()">
+          <i class="fas fa-redo"></i> Reset All
+        </button>
+      </div>
+    </div>
+
+    <!-- Add Required Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      // Initialize AOS
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof AOS !== "undefined") {
+          AOS.init({
+            duration: 1000,
+            once: true,
+            easing: "ease-in-out",
+          });
+        }
+      });
+
+      // Accessibility Functions
+      let currentFontSize = 100;
+      let isHighContrast = false;
+      let speech = null;
+
+      function toggleAccessibility() {
+        const panel = document.getElementById("accessibility-panel");
+        if (panel.style.display === "none" || panel.style.display === "") {
+          panel.style.display = "block";
+        } else {
+          panel.style.display = "none";
+        }
+      }
+
+      function increaseFontSize() {
+        currentFontSize += 10;
+        if (currentFontSize > 150) currentFontSize = 150;
+        document.body.style.fontSize = currentFontSize + "%";
+      }
+
+      function decreaseFontSize() {
+        currentFontSize -= 10;
+        if (currentFontSize < 80) currentFontSize = 80;
+        document.body.style.fontSize = currentFontSize + "%";
+      }
+
+      function toggleHighContrast() {
+        isHighContrast = !isHighContrast;
+        if (isHighContrast) {
+          document.body.style.filter = "contrast(150%) brightness(110%)";
+        } else {
+          document.body.style.filter = "none";
+        }
+      }
+
+      function readAloud() {
+        if ("speechSynthesis" in window) {
+          // Stop any ongoing speech
+          window.speechSynthesis.cancel();
+
+          // Get page content (simplified for demo)
+          const content = document.body.innerText;
+
+          // Create and configure speech
+          const utterance = new SpeechSynthesisUtterance(content);
+          utterance.rate = 0.9;
+          utterance.pitch = 1;
+          utterance.volume = 0.8;
+
+          // Speak the text
+          window.speechSynthesis.speak(utterance);
+          speech = utterance;
+        } else {
+          alert("Sorry, your browser does not support text-to-speech.");
+        }
+      }
+
+      function stopReading() {
+        if ("speechSynthesis" in window) {
+          window.speechSynthesis.cancel();
+        }
+      }
+
+      function resetAccessibility() {
+        currentFontSize = 100;
+        isHighContrast = false;
+        document.body.style.fontSize = "100%";
+        document.body.style.filter = "none";
+        document.body.classList.remove("dark-mode");
+        stopReading();
+      }
+
+      // Close panel when clicking outside
+      document.addEventListener("click", function (event) {
+        const panel = document.getElementById("accessibility-panel");
+        const button = document.querySelector(".accessibility-btn");
+
+        if (
+          panel.style.display === "block" &&
+          !panel.contains(event.target) &&
+          !button.contains(event.target)
+        ) {
+          panel.style.display = "none";
+        }
+      });
+
+      // Simple visitor counter
+      let visitorCount = 12896;
+      function updateVisitorCounter() {
+        visitorCount++;
+        document.getElementById("visitorCounter").textContent =
+          visitorCount.toLocaleString("mr-IN");
+      }
+
+      // Update counter on page load
+      updateVisitorCounter();
+
+      // Initialize AOS when DOM is loaded
+    </script>
+    <div id="popupOverlay" class="popup-overlay" style="display: none">
+      <div class="popup-content">
+        <button class="close-btn" id="closePopup">&times;</button>
+        <img src="./Img/popup.jpeg" alt="Popup" class="popup-image" />
+      </div>
+    </div>
+
+    <script>
+      // Add this script to each HTML page
+      document.addEventListener("DOMContentLoaded", function () {
+        const popupOverlay = document.getElementById("popupOverlay");
+        const closePopup = document.getElementById("closePopup");
+
+        // Check if page was reloaded or it's first visit
+        const isReloaded = performance.navigation.type === 1;
+        const hasSeenPopup = sessionStorage.getItem("hasSeenPopup");
+
+        // Show popup on first visit OR page reload
+        if (!hasSeenPopup || isReloaded) {
+          popupOverlay.style.display = "flex";
+          sessionStorage.setItem("hasSeenPopup", "true");
+        }
+
+        closePopup.addEventListener("click", function () {
+          popupOverlay.style.display = "none";
+        });
+
+        popupOverlay.addEventListener("click", function (e) {
+          if (e.target === popupOverlay) {
+            popupOverlay.style.display = "none";
+          }
+        });
+
+        // Close with Escape key
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && popupOverlay.style.display === "flex") {
+            popupOverlay.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

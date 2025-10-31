@@ -1,0 +1,144 @@
+.helpline-section {
+  margin: 4rem 0;
+}
+
+.helpline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.helpline-card,
+.forms-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-header {
+  border-radius: 12px 12px 0 0 !important;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--honolulu-blue),
+    var(--blue-green)
+  ) !important;
+  color: white;
+  font-weight: 600;
+}
+
+.helpline-list,
+.forms-list {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.helpline-item,
+.form-item {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.helpline-item:last-child,
+.form-item:last-child {
+  border-bottom: none;
+}
+
+.helpline-item:hover,
+.form-item:hover {
+  background-color: #f8f9fa;
+  transform: translateX(5px);
+}
+
+.helpline-icon,
+.file-icon {
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #e9f2ff;
+  color: var(--honolulu-blue);
+}
+
+.helpline-item:hover .helpline-icon,
+.form-item:hover .file-icon {
+  transform: scale(1.1);
+  background: var(--honolulu-blue);
+  color: white;
+}
+
+.helpline-info h6,
+.form-info h6 {
+  margin-bottom: 0.25rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.helpline-info p,
+.form-info p {
+  margin-bottom: 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.helpline-number {
+  color: var(--blue-green) !important;
+  font-weight: 600;
+  font-size: 1rem !important;
+}
+
+.btn {
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .helpline-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .helpline-item,
+  .form-item {
+    padding: 0.8rem 1rem;
+  }
+
+  .helpline-icon,
+  .file-icon {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .helpline-item,
+  .form-item {
+    padding: 0.75rem;
+  }
+
+  .helpline-info h6,
+  .form-info h6 {
+    font-size: 0.9rem;
+  }
+
+  .helpline-info p,
+  .form-info p {
+    font-size: 0.8rem;
+  }
+
+  .helpline-number {
+    font-size: 0.9rem !important;
+  }
+}

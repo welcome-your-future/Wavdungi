@@ -1,0 +1,82 @@
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0ea5e9;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0284c7;
+  border-left: 4px solid #0ea5e9;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.custom-list {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-gradient-info {
+  background: linear-gradient(to right, #0ea5e9, #38bdf8);
+  border: none;
+}
+
+.card-body p,
+.card-body li {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0ea5e9; /* info blue accent */
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0284c7; /* darker blue */
+  border-left: 4px solid #0ea5e9;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.custom-list {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-gradient-info {
+  background: linear-gradient(to right, #0ea5e9, #38bdf8);
+  border: none;
+}
+
+.card-body p,
+.card-body li {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}

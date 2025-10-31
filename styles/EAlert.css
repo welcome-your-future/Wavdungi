@@ -1,0 +1,234 @@
+.ealert-section {
+  margin: 4rem 0;
+}
+
+.ealert-card {
+  background: linear-gradient(135deg, #fff3cd, #ffeeba);
+  border: 2px solid #ffc107;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.2);
+  transition: all 0.3s ease;
+}
+
+.ealert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.3);
+}
+
+.ealert-header {
+  background: linear-gradient(135deg, #ffc107, #ff8c00) !important;
+  color: white;
+  border-radius: 10px 10px 0 0 !important;
+  padding: 1rem 1.5rem;
+}
+
+.ealert-icon {
+  font-size: 2rem;
+  color: #ff6f00;
+  margin-right: 1rem;
+}
+
+.ealert-body {
+  padding: 1.5rem;
+}
+
+.ealert-title {
+  color: #da5e0b;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.ealert-description {
+  color: #856404;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.ealert-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ealert-feature {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+}
+
+.ealert-feature i {
+  color: #ff8c00;
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.ealert-feature span {
+  color: #856404;
+  font-weight: 500;
+}
+
+.ealert-button {
+  background: linear-gradient(135deg, #ff8c00, #ff6f00);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.ealert-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 111, 0, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+/* Service Cards Styling */
+.service-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  min-width: 140px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #007bff;
+  text-decoration: none;
+}
+
+/* Icon Styling - Uniform size for all icons */
+.service-card i {
+  font-size: 2.5rem !important; /* Fixed size for Font Awesome icons */
+  margin-bottom: 0.5rem;
+  display: block;
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+
+/* Police Logo Styling - Reduced size to match icons */
+.service-icon {
+  width: 1.8rem !important; /* Reduced from 2.5rem */
+  height: 1.8rem !important; /* Reduced from 2.5rem */
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.service-card .fw-bold {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #333;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ealert-features {
+    grid-template-columns: 1fr;
+  }
+
+  .ealert-body {
+    padding: 1rem;
+  }
+
+  .ealert-title {
+    font-size: 1.1rem;
+  }
+
+  .ealert-icon {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+  }
+
+  .service-card {
+    min-width: 120px;
+    height: 100px;
+    padding: 1rem !important;
+  }
+
+  .service-card i {
+    font-size: 2rem !important;
+    height: 2rem;
+    line-height: 2rem;
+  }
+
+  .service-icon {
+    width: 1.5rem !important; /* Reduced for mobile */
+    height: 1.5rem !important; /* Reduced for mobile */
+  }
+
+  .service-card .fw-bold {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ealert-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .ealert-body {
+    padding: 0.75rem;
+  }
+
+  .ealert-feature {
+    padding: 0.5rem;
+  }
+
+  .ealert-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .service-card {
+    min-width: 100px;
+    height: 90px;
+    padding: 0.75rem !important;
+  }
+
+  .service-card i {
+    font-size: 1.8rem !important;
+    height: 1.8rem;
+    line-height: 1.8rem;
+  }
+
+  .service-icon {
+    width: 1.3rem !important; /* Further reduced for small mobile */
+    height: 1.3rem !important; /* Further reduced for small mobile */
+  }
+
+  .service-card .fw-bold {
+    font-size: 0.75rem;
+  }
+}
+
+/* Ensure all service cards have consistent spacing */
+.col-auto.text-center.mb-3 {
+  margin: 0 0.5rem;
+}
+
+/* Container background */
+#ealert {
+  background-color: #ade8f4ff !important;
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 95%;
+}

@@ -1,0 +1,397 @@
+/* Table Styling */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table thead th {
+  background-color: #3b82f6; /* Blue header */
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9fafb; /* Light gray stripe */
+}
+
+.table tbody tr:hover {
+  background-color: #e0f2fe; /* Light blue hover */
+  transform: scale(1.01);
+}
+
+/* Responsive table container */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+/* Links inside tables */
+.table a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.table a:hover {
+  text-decoration: underline;
+}
+
+/* Small screens adjustments */
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}
+/* ImpNumbers Search Styles */
+.contacts-search-container {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto 30px;
+}
+
+.contacts-search-box {
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.contacts-search-box:focus-within {
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+  transform: translateY(-2px);
+}
+
+.contacts-search-input-group {
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  position: relative;
+}
+
+.contacts-search-icon {
+  color: rgb(35, 51, 169);
+  font-size: 1.2rem;
+  margin-right: 15px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.contacts-search-input {
+  border: none;
+  outline: none;
+  padding: 18px 0;
+  font-size: 1.1rem;
+  width: 100%;
+  background: transparent;
+  color: rgb(34, 10, 10);
+  font-weight: 500;
+}
+
+.contacts-search-input::placeholder {
+  color: rgba(19, 6, 6, 0.8);
+}
+
+.contacts-clear-search {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.contacts-clear-search:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.contacts-search-results-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e9ecef;
+  margin-top: 15px;
+  z-index: 1000;
+  max-height: 450px;
+  overflow: hidden;
+}
+
+.contacts-search-results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 25px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 1px solid #dee2e6;
+  font-size: 0.95rem;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.contacts-close-results {
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.contacts-close-results:hover {
+  background: #e9ecef;
+  color: #dc3545;
+}
+
+.contacts-search-results-body {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.contacts-search-results-list {
+  padding: 10px 0;
+}
+
+.contacts-search-result-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f8f9fa;
+  position: relative;
+}
+
+.contacts-search-result-item:last-child {
+  border-bottom: none;
+}
+
+.contacts-search-result-item:hover {
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+  transform: translateX(5px);
+}
+
+.contacts-search-result-item:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 0 4px 4px 0;
+}
+
+.contacts-result-content {
+  flex: 1;
+}
+
+.contacts-result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contacts-result-title {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.contacts-result-category {
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contacts-result-category.educational {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.contacts-result-category.medical {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.contacts-result-category.government {
+  background: #e8f5e8;
+  color: #388e3c;
+}
+
+.contacts-result-category.utility {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.contacts-result-category.financial {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.contacts-result-contact {
+  margin: 0 0 5px 0;
+  color: #28a745;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.contacts-result-description {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.contacts-result-arrow {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-left: 15px;
+  transition: transform 0.2s ease;
+}
+
+.contacts-search-result-item:hover .contacts-result-arrow {
+  transform: translateX(3px);
+  color: #667eea;
+}
+
+.contacts-no-results {
+  text-align: center;
+  padding: 50px 25px;
+  color: #6c757d;
+}
+
+.contacts-no-results-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #dee2e6;
+  opacity: 0.7;
+}
+
+.contacts-no-results p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Toll Free Grid */
+.toll-free-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.toll-free-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.toll-free-card:hover {
+  transform: translateY(-5px);
+}
+
+.toll-free-name {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.toll-free-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Scrollbar styling */
+.contacts-search-results-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.contacts-search-results-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.contacts-search-results-body::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+}
+
+.contacts-search-results-body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contacts-search-container {
+    max-width: 100%;
+    margin: 15px auto 25px;
+  }
+
+  .contacts-search-input-group {
+    padding: 0 20px;
+  }
+
+  .contacts-search-input {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+
+  .contacts-search-results-dropdown {
+    border-radius: 15px;
+  }
+
+  .contacts-result-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contacts-result-category {
+    margin-top: 5px;
+  }
+
+  .toll-free-grid {
+    grid-template-columns: 1fr;
+  }
+}
