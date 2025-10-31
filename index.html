@@ -1,1 +1,1069 @@
-Wavdungi
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>वावडूंगी ग्रामपंचायत | Wawdungi Gram Panchayat</title>
+    
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    
+    <style>
+        :root {
+            --primary: #2c5530;
+            --primary-light: #4a7c59;
+            --primary-dark: #1e3a28;
+            --secondary: #d4af37;
+            --secondary-light: #e6c75a;
+            --secondary-dark: #b8941f;
+            --accent: #e67e22;
+            --accent-light: #f39c12;
+            --accent-dark: #c0392b;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --text: #34495e;
+            --text-light: #7f8c8d;
+            --background: #f5f6fa;
+            --white: #ffffff;
+            --card-bg: #ffffff;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+            --border-radius: 20px;
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 4rem;
+            text-align: center;
+            color: var(--primary);
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 6px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            border-radius: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border: none;
+            border-radius: 50px;
+            padding: 16px 36px;
+            font-weight: 600;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            color: white;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+        }
+
+        .btn-primary:hover:before {
+            left: 100%;
+        }
+
+        .btn-outline-primary {
+            border: 3px solid var(--primary);
+            color: var(--primary);
+            border-radius: 50px;
+            padding: 14px 32px;
+            font-weight: 600;
+            transition: var(--transition);
+            background: transparent;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card {
+            border: none;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            overflow: hidden;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* NEW HEADER DESIGN */
+        .top-bar {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 12px 0;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .logo-header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px 0;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .logo {
+            height: 90px;
+            width: auto;
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            border: 4px solid var(--primary);
+            background: white;
+            padding: 8px;
+        }
+
+        .logo:hover {
+            transform: scale(1.08) rotate(2deg);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .village-info {
+            flex: 1;
+        }
+
+        .village-name {
+            color: var(--primary);
+            font-weight: 900;
+            margin-bottom: 0;
+            font-size: 2.4rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .village-subtitle {
+            color: var(--secondary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: -5px;
+            letter-spacing: 1.5px;
+        }
+
+        .header-badges {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .header-badge {
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+            color: var(--white);
+            padding: 12px 22px;
+            border-radius: 35px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .header-badge:hover {
+            transform: translateY(-3px);
+        }
+
+        .header-badge.secondary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+        }
+
+        .nav-bar {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--white) !important;
+            font-weight: 600;
+            padding: 20px 25px !important;
+            transition: var(--transition);
+            position: relative;
+            border-radius: 12px;
+            margin: 0 8px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .navbar-nav .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 4px;
+            background-color: var(--secondary);
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+
+        .navbar-nav .nav-link:hover:after,
+        .navbar-nav .nav-link.active:after {
+            width: 70%;
+        }
+
+        .dropdown-menu {
+            border: none;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-hover);
+            padding: 15px 0;
+            margin-top: 10px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .dropdown-item {
+            padding: 14px 25px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+        }
+
+        .dropdown-item:hover {
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            color: var(--white);
+            padding-left: 30px;
+            transform: translateX(5px);
+        }
+
+        .marquee {
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+            color: var(--white);
+            padding: 15px 0;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        .marquee:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 4s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* NEW HERO SECTION */
+        .hero-section {
+            position: relative;
+            height: 95vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .hero-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(44, 85, 48, 0.3), rgba(212, 175, 55, 0.3));
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.9);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            animation: pulse 3s infinite;
+            text-transform: uppercase;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4); }
+            100% { transform: scale(1); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); }
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            line-height: 1.1;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #ffffff, #f1c40f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.4;
+        }
+
+        .hero-line {
+            width: 150px;
+            height: 6px;
+            background: var(--secondary);
+            margin: 0 auto 40px;
+            border-radius: 6px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-line:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 100%;
+            background: var(--accent);
+            border-radius: 6px;
+            animation: slide 4s infinite;
+        }
+
+        @keyframes slide {
+            0% { left: 0; }
+            50% { left: calc(100% - 50px); }
+            100% { left: 0; }
+        }
+
+        /* NEW ABOUT SECTION */
+        .about-section {
+            padding: 140px 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-section:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(44, 85, 48, 0.05) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .about-content {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            text-align: justify;
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        .important-links-card {
+            height: 100%;
+            position: relative;
+            z-index: 1;
+            border: 2px solid rgba(44, 85, 48, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        .important-links-card .card-body {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        /* NEW OFFICERS SECTION */
+        .officers-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #e8f5e8 0%, #d0ebd0 100%);
+            position: relative;
+        }
+
+        .officer-card {
+            text-align: center;
+            padding: 45px 30px;
+            border-radius: var(--border-radius);
+            background: var(--white);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(135deg, var(--primary), var(--accent)) border-box;
+        }
+
+        .officer-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .officer-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .officer-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 30px;
+            border: 6px solid var(--light);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .officer-card:hover .officer-img {
+            transform: scale(1.1);
+            border-color: var(--primary-light);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .officer-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .officer-position {
+            color: var(--secondary);
+            font-weight: 700;
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .officer-position:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 3px;
+        }
+
+        .officer-contact {
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+
+        /* NEW COUNTERS SECTION */
+        .counters-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .counters-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%231e3a28"><path d="M0 0h1000v100L0 0z"/></svg>');
+            background-size: cover;
+            opacity: 0.1;
+        }
+
+        .counter-card {
+            text-align: center;
+            padding: 45px 30px;
+            border-radius: var(--border-radius);
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            transition: var(--transition);
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .counter-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+        }
+
+        .counter-card:hover {
+            transform: translateY(-12px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .counter-icon {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            color: var(--secondary);
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+        }
+
+        .counter-number {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--secondary-light), var(--white));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .counter-label {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* Continue with other sections... */
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .hero-title {
+                font-size: 4rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 3.2rem;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .village-info {
+                order: -1;
+            }
+            
+            .header-badges {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .officer-img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .village-name {
+                font-size: 2rem;
+            }
+            
+            .header-badges {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .header-badge {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <i class="fas fa-landmark me-2"></i> महाराष्ट्र शासन | GOVERNMENT OF MAHARASHTRA
+                </div>
+                <div class="col-md-6 d-flex justify-content-end align-items-center gap-3 flex-wrap">
+                    <span>
+                        <i class="fas fa-envelope me-1"></i>
+                        gpWawdungi1947@gmail.com
+                    </span>
+                    <span>
+                        <i class="fas fa-phone me-1"></i>
+                        +९१ ९३७०६९४६५१
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logo Header -->
+    <div class="logo-header">
+        <div class="container">
+            <div class="header-container">
+                <div class="logo-section">
+                    <img src="./Img/main_logo.jpeg" alt="ग्रामपंचायत लोगो" class="logo">
+                    <div class="village-info">
+                        <h1 class="village-name">वावडूंगी ग्रामपंचायत</h1>
+                        <div class="village-subtitle">Wawdungi Gram Panchayat | Progress Through Unity</div>
+                    </div>
+                </div>
+                <div class="header-badges">
+                    <div class="header-badge">
+                        <i class="fas fa-award me-1"></i>
+                        आदर्श ग्रामपंचायत
+                    </div>
+                    <div class="header-badge secondary">
+                        <i class="fas fa-star me-1"></i>
+                        डिजिटल ग्राम
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark nav-bar">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./">
+                            <i class="fas fa-home me-1"></i> मुखपृष्ठ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./members.html">
+                            <i class="fas fa-users me-1"></i> पदाधिकारी
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./villageinfo.html">
+                            <i class="fas fa-info-circle me-1"></i> गावाची माहिती
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./impnumbers.html">
+                            <i class="fas fa-phone-alt me-1"></i> महत्वाचे नंबर
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="schemesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-landmark me-1"></i> शासकीय योजना
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="schemesDropdown">
+                            <li><a class="dropdown-item" href="./fifteen.html"><i class="fas fa-file-invoice-dollar me-2"></i>१५ वित्त आयोग</a></li>
+                            <li><a class="dropdown-item" href="./jaljeevan.html"><i class="fas fa-tint me-2"></i>जल जीवन मिशन</a></li>
+                            <li><a class="dropdown-item" href="./pmyojna.html"><i class="fas fa-home me-2"></i>प्रधान मंत्री आवास योजना</a></li>
+                            <li><a class="dropdown-item" href="./mgandhi.html"><i class="fas fa-briefcase me-2"></i>महात्मा गांधी रोजगार हमी योजना</a></li>
+                            <li><a class="dropdown-item" href="./tandavasti.html"><i class="fas fa-map-marked-alt me-2"></i>तांडा/वस्ती योजना</a></li>
+                            <li><a class="dropdown-item" href="./scneo.html"><i class="fas fa-hands-helping me-2"></i>अनुसूचीत जाती व नवबौध्द विकास</a></li>
+                            <li><a class="dropdown-item" href="./ramaiyojna.html"><i class="fas fa-house-user me-2"></i>रमाई आवास योजना</a></li>
+                            <li><a class="dropdown-item" href="./shabriyojna.html"><i class="fas fa-mountain me-2"></i>शबरी आदिवासी घरकुल योजना</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="beneficiaryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-users-line me-1"></i> लाभार्थी रजिस्टर
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="beneficiaryDropdown">
+                            <li><a class="dropdown-item" href="./pmlabh.html"><i class="fas fa-home me-2"></i>प्रधानमंत्री आवास योजना</a></li>
+                            <li><a class="dropdown-item" href="./shabrilabh.html"><i class="fas fa-mountain me-2"></i>शबरी आवास योजना</a></li>
+                            <li><a class="dropdown-item" href="./ramailabh.html"><i class="fas fa-house-user me-2"></i>रमाई आवास योजना</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./services.html">
+                            <i class="fas fa-user-check me-1"></i> नागरिकांसाठी सेवा
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./taxcollect.html">
+                            <i class="fas fa-money-bill-wave me-1"></i> कर संकलन
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./complaint.html">
+                            <i class="fas fa-comments me-1"></i> तक्रार द्या
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="container">
+            <marquee behavior="scroll" direction="left">
+                <i class="fas fa-bullhorn me-2"></i>
+                ग्रामपंचायत मध्ये स्वच्छता अभियान चालू आहे. सर्व नागरिकांनी सहभागी व्हावे. | स्वच्छ भारत अभियानासाठी सहकार्य करा.
+            </marquee>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
+                <span class="hero-badge">स्वागत आहे</span>
+                <h1 class="hero-title">वावडूंगी ग्रामपंचायत</h1>
+                <p class="hero-subtitle">सर्वांगीण विकासाच्या दिशेने सतत प्रयत्नशील, प्रगतीशील आणि समृद्ध ग्रामपंचायत</p>
+                <div class="hero-line"></div>
+                <a href="#about" class="btn btn-primary">
+                    अधिक जाणून घ्या <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">गावा विषयी</h2>
+            <div class="row">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="about-content">
+                        <p>
+                            वावडूंगी ग्रामपंचायत ही अलिबाग जिल्हा परिषद, मुरुड पंचायत समिती अंतर्गत येणारी एक ग्रामिण स्वराज्य संस्था आहे. गावाची लोकसंख्या ८२७ असून महाराष्ट्राच्या रायगड जिल्ह्यातील मुरुड तालुक्यात वसलेले एक महत्त्वपूर्ण गाव आहे. वावडूंगी ही स्वतंत्र ग्रामपंचायत आहे जिल्हा मुख्यालयापासून सुमारे 52 किलोमीटर अंतरावर असलेले हे एक डोंगर भागातील गाव आहे वावडूंगी हे एक स्वतंत्र ग्रामपंचायत असलेले डोंगराळ भागातील सुंदर आणि निसर्गरम्य गाव आहे.
+                        </p>
+                        <p>
+                            गावाच्या सभोवताल हिरवाईने नटलेली टेकड्या, लहान ओढे आणि शेतीयोग्य जमीन आढळते. येथील मुख्य पिकांमध्ये भात, नाचणी, वारी, भाजीपाला इत्यादींचा समावेश होतो. ग्रामपंचायतीकडून गावातील पाणीपुरवठा, रस्ते, स्वच्छता आणि शिक्षणविषयक सुविधा यांसारख्या मूलभूत गरजांकडे विशेष लक्ष दिले जाते.
+                        </p>
+                        <p>
+                            गावात प्राथमिक शाळा, मंदिर, अंगणवाडी केंद्र तसेच विविध सामाजिक संघटना कार्यरत आहेत. ग्रामस्थांमध्ये ऐक्यभाव आणि परंपरागत संस्कृतीचे पालन दिसून येते. वार्षिक सण, उत्सव आणि पारंपरिक जत्रा गावाच्या सामाजिक जीवनाला अधिक रंगतदार बनवतात. वावडूंगी हे गाव लहान असले तरी तेथील लोकांचे श्रम, परिश्रम आणि निसर्गाशी असलेले नाते हे त्याचे खरे वैभव आहे.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-left">
+                    <div class="card important-links-card">
+                        <div class="card-header bg-primary text-white py-4">
+                            <h5 class="mb-0"><i class="fas fa-link me-2"></i>महत्वाचे दुवे</h5>
+                        </div>
+                        <div class="card-body">
+                            <a href="https://www.india.gov.in/" target="_blank" class="btn btn-outline-primary w-100 mb-3 d-flex align-items-center justify-content-center">
+                                <i class="fas fa-globe me-2"></i> भारत सरकार
+                            </a>
+                            <a href="https://www.maharashtra.gov.in/" target="_blank" class="btn btn-outline-primary w-100 mb-3 d-flex align-items-center justify-content-center">
+                                <i class="fas fa-landmark me-2"></i> महाराष्ट्र शासन
+                            </a>
+                            <a href="https://rdd.maharashtra.gov.in/" target="_blank" class="btn btn-outline-primary w-100 mb-3 d-flex align-items-center justify-content-center">
+                                <i class="fas fa-hands-helping me-2"></i> ग्रामीण विकास विभाग
+                            </a>
+                            <a href="https://Wawdungi.gov.in/" target="_blank" class="btn btn-outline-primary w-100 mb-3 d-flex align-items-center justify-content-center">
+                                <i class="fas fa-user-tie me-2"></i> जिल्हाधिकारी कार्यालय
+                            </a>
+                            <a href="https://www.Wawdungipolice.gov.in/" target="_blank" class="btn btn-outline-primary w-100 mb-3 d-flex align-items-center justify-content-center">
+                                <i class="fas fa-shield-alt me-2"></i> गोंदिया पोलीस
+                            </a>
+                            <a href="https://aaplesarkar.mahaonline.gov.in/" target="_blank" class="btn btn-outline-primary w-100 mb-3 d-flex align-items-center justify-content-center">
+                                <i class="fas fa-laptop me-2"></i> आपले सरकार सेवा
+                            </a>
+                            <a href="https://mahadbt.maharashtra.gov.in/login/login" target="_blank" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center">
+                                <i class="fas fa-database me-2"></i> महा DBT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Officers Section -->
+    <section id="officers" class="officers-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">ग्रामपंचायत अधिकारी</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="officer-card">
+                        <img src="./Img/spr.jpeg" alt="सौ.कल्पना अंकुश पवार" class="officer-img">
+                        <h3 class="officer-name">सौ.कल्पना अंकुश पवार</h3>
+                        <p class="officer-position">सरपंच</p>
+                        <p class="officer-contact">
+                            <i class="fas fa-phone me-2"></i>८२६१८५७१२२
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="officer-card">
+                        <img src="./Img/upsarpanch.jpg" alt="श्री. निलेश हरिश्चंद्र तांबडकर" class="officer-img">
+                        <h3 class="officer-name">श्री. निलेश हरिश्चंद्र तांबडकर</h3>
+                        <p class="officer-position">उपसरपंच</p>
+                        <p class="officer-contact">
+                            <i class="fas fa-phone me-2"></i>९२७१४८४१५१
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="officer-card">
+                        <img src="./Img/officer.png" alt="श्री अलंकार धुमाळ" class="officer-img">
+                        <h3 class="officer-name">श्री अलंकार धुमाळ</h3>
+                        <p class="officer-position">ग्रामपंचायत अधिकारी</p>
+                        <p class="officer-contact">
+                            <i class="fas fa-phone me-2"></i>संपर्क क्रमांक
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counters Section -->
+    <section class="counters-section">
+        <div class="container">
+            <h2 class="section-title text-white" data-aos="fade-up">गावातील लोकसंख्या किती आहे</h2>
+            <div class="row">
+                <div class="col-6 col-md-3 mb-4" data-aos="flip-up" data-aos-delay="0">
+                    <div class="counter-card">
+                        <i class="fas fa-users counter-icon"></i>
+                        <div class="counter-number" id="families-counter">234</div>
+                        <div class="counter-label">कुटुंबांची संख्या</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="flip-up" data-aos-delay="100">
+                    <div class="counter-card">
+                        <i class="fas fa-users-between-lines counter-icon"></i>
+                        <div class="counter-number" id="population-counter">827</div>
+                        <div class="counter-label">लोकसंख्या</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="flip-up" data-aos-delay="200">
+                    <div class="counter-card">
+                        <i class="fas fa-male counter-icon"></i>
+                        <div class="counter-number" id="male-counter">379</div>
+                        <div class="counter-label">पुरुष</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="flip-up" data-aos-delay="300">
+                    <div class="counter-card">
+                        <i class="fas fa-female counter-icon"></i>
+                        <div class="counter-number" id="female-counter">448</div>
+                        <div class="counter-label">महिला</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rest of the sections would continue with the new design... -->
+
+    <!-- Accessibility Button -->
+    <button class="accessibility-btn" onclick="toggleAccessibility()" title="Accessibility Options">
+        <i class="fas fa-universal-access"></i>
+        सुलभता
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1200,
+            once: true,
+            easing: 'ease-out-back',
+        });
+
+        // Counter Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('.counter-number');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const target = +counter.innerText;
+                const increment = target / speed;
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current);
+                        setTimeout(updateCounter, 1);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        });
+
+        // Accessibility Functions
+        function toggleAccessibility() {
+            alert('सुलभता पर्याय सक्रिय केले आहेत. ही वैशिष्ट्ये लवकरच उपलब्ध होतील.');
+        }
+
+        // Visitor Counter
+        let visitorCount = 12896;
+        function updateVisitorCounter() {
+            visitorCount++;
+            document.getElementById('visitorCounter').textContent = visitorCount.toLocaleString('mr-IN');
+        }
+        // Simulate visitor count update
+        setInterval(updateVisitorCounter, 30000);
+    </script>
+</body>
+</html>
