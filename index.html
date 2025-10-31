@@ -1,53 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page Title -->
-    <title>Gram Panchayat Telwade - Enhanced Hero Section</title>
+    <title>Gram Panchayat Wavdungi - Balanced Theme</title>
 
     <!-- CSS Libraries -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Google Translate Script -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
-          new google.translate.TranslateElement({pageLanguage: 'mr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            new google.translate.TranslateElement({ pageLanguage: 'mr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
         }
     </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <style>
         :root {
-            /* Balanced Two-Color Scheme: Orange + Blue */
+            /* Vibrant, Warm, High-Visibility Orange Palette */
             --primary: #C44000;
+            /* Deep Burnt Orange for main accents/CTAs */
             --primary-light: #FF7B00;
+            /* Bright Orange/Amber Accent */
             --primary-dark: #A33600;
-            
-            --secondary: #1E6EA7;
-            --secondary-light: #2D8BD6;
-            --secondary-dark: #15537D;
-            
+            /* Darker Orange/Brown for header/footer */
+            --secondary: #FFC300;
+            /* Gold/Yellow Accent for badges/highlights */
+
+            /* NEW CONTRAST COLOR: Deep Slate Gray/Navy for large sections */
+            --contrast-dark: #1E293B;
+
             --accent: #FFF0E5;
+            /* Very light cream/pale orange for subtle backgrounds */
             --light: #F5F7FA;
+            /* Clean Light Gray/Off-White Background */
+
+            /* Body Text Color: Very Dark Gray (Charcoal) - Soft on the eyes */
             --dark: #333333;
-            
+
             --text: var(--dark);
             --text-light: #555555;
             --background: var(--light);
@@ -72,21 +74,21 @@
             overflow-x: hidden;
             transition: var(--transition);
         }
-        
-        /* Accessibility Modes */
+
+        /* Accessibility Modes (Maintaining high contrast) */
         body.accessibility-mode {
             background-color: #000;
             color: #fff;
         }
-        
+
         body.accessibility-mode .card,
         body.accessibility-mode .logo-header,
         body.accessibility-mode .footer {
             background: #111;
             border: 1px solid #fff;
         }
-        
-        body.accessibility-mode h2, 
+
+        body.accessibility-mode h2,
         body.accessibility-mode h4,
         body.accessibility-mode .village-name,
         body.accessibility-mode .section-title,
@@ -96,43 +98,52 @@
         }
 
         body.accessibility-mode .btn-outline-primary {
-             border-color: #fff;
+            border-color: #fff;
         }
 
         body.accessibility-mode .btn-outline-primary:hover {
             background-color: #fff;
             color: #000 !important;
         }
-        
+
         body.font-resize {
             font-size: 110%;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Inter', sans-serif;
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 0.5rem;
-            color: var(--dark); 
+            /* Headings are now dark charcoal by default, reducing orange saturation */
+            color: var(--dark);
         }
-        
-        .village-name, .section-title, .hero-title {
-             color: var(--primary); 
+
+        /* Primary Headings remain orange for impact */
+        .village-name,
+        .section-title,
+        .hero-title {
+            color: var(--primary);
         }
 
         a {
             text-decoration: none;
             transition: var(--transition);
         }
-        
-        /* Button Styles */
+
+        /* Button Styles: Bright Orange CTA */
         .btn-primary {
             background: var(--primary-light);
             border: none;
-            border-radius: 30px; 
+            border-radius: 30px;
             padding: 12px 30px;
             font-weight: 600;
-            box-shadow: 0 6px 15px rgba(255, 123, 0, 0.4); 
+            box-shadow: 0 6px 15px rgba(255, 123, 0, 0.4);
             transition: var(--transition);
             color: var(--white);
             letter-spacing: 0.5px;
@@ -140,8 +151,8 @@
 
         .btn-primary:hover {
             transform: translateY(-4px);
-            box-shadow: 0 10px 20px rgba(255, 123, 0, 0.6); 
-            background: var(--primary); 
+            box-shadow: 0 10px 20px rgba(255, 123, 0, 0.6);
+            background: var(--primary);
             color: var(--white);
         }
 
@@ -158,7 +169,7 @@
             background-color: var(--primary);
             color: var(--white);
             transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(196, 64, 0, 0.3); 
+            box-shadow: 0 4px 10px rgba(196, 64, 0, 0.3);
         }
 
         .section-title {
@@ -167,6 +178,7 @@
             margin-bottom: 3rem;
             text-align: center;
             color: var(--primary);
+            /* Main sections titles remain orange */
             font-size: 2.2rem;
             font-weight: 800;
         }
@@ -179,7 +191,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: var(--primary-light); 
+            background: var(--primary-light);
             border-radius: 4px;
         }
 
@@ -213,19 +225,20 @@
             padding: 15px 0;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
-        
+
         .logo {
             height: 70px;
             width: 70px;
             border-radius: 50%;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border: 3px solid var(--primary-light); 
+            border: 3px solid var(--primary-light);
             padding: 3px;
             object-fit: cover;
         }
 
         .village-name {
             color: var(--primary);
+            /* Keep village name orange for identity */
             font-weight: 800;
             font-size: 2.5rem;
             display: inline-block;
@@ -236,7 +249,7 @@
             display: block;
             width: 80%;
             height: 2px;
-            background: var(--primary-light); 
+            background: var(--primary-light);
             margin-top: 5px;
             border-radius: 1px;
         }
@@ -248,6 +261,18 @@
             margin-top: 5px;
             letter-spacing: 1.5px;
             text-transform: uppercase;
+        }
+
+        .header-badge {
+            background: var(--primary-light);
+            color: var(--dark);
+            box-shadow: 0 4px 10px rgba(255, 123, 0, 0.4);
+        }
+
+        .header-badge.secondary {
+            background: var(--secondary);
+            color: var(--dark);
+            box-shadow: 0 4px 10px rgba(255, 195, 0, 0.5);
         }
 
         /* Navigation Bar */
@@ -327,48 +352,13 @@
             flex-wrap: wrap;
             margin-bottom: 3rem;
         }
-        
-        .hero-stats {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary-light);
-            display: block;
-            line-height: 1;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .hero-image {
-            position: relative;
-            z-index: 1;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-        
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            transition: var(--transition);
-        }
-        
-        .hero-image:hover img {
-            transform: scale(1.05);
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            padding: 16px;
+            background-size: 35%;
         }
 
         /* Officers Section */
@@ -379,10 +369,12 @@
 
         .officer-card {
             text-align: center;
-            border-top: 4px solid var(--secondary); 
+            /* Changed accent border from primary-light (bright orange) to secondary (gold) */
+            border-top: 4px solid var(--secondary);
             box-shadow: var(--shadow);
         }
-        
+
+        /* Officer Role is a subtle orange accent */
         .officer-role {
             color: var(--secondary);
             font-weight: 600;
@@ -393,24 +385,27 @@
         /* Stats Section */
         .stats-section {
             padding: 80px 0;
-            background: var(--secondary-dark);
+            background: var(--contrast-dark);
+            /* Deep Slate Gray/Navy Background */
             color: var(--white);
         }
-        
+
         .counter-box {
             background: rgba(255, 255, 255, 0.08);
+            /* Darker background accent */
             border-radius: var(--border-radius);
             transition: var(--transition);
         }
-        
+
         .counter-box:hover {
             background: rgba(255, 255, 255, 0.15);
             transform: translateY(-5px);
         }
-        
+
         .counter-icon {
             font-size: 3.2rem;
-            color: var(--primary-light);
+            color: var(--secondary);
+            /* Bright Gold icon */
             margin-bottom: 0.5rem;
         }
 
@@ -427,11 +422,12 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+
         /* Gallery Section */
         .gallery-img {
             border-radius: var(--border-radius);
-            border: 3px solid var(--light); 
+            /* Changed border from bright orange to subtle light gray/shadow */
+            border: 3px solid var(--light);
             box-shadow: var(--shadow);
         }
 
@@ -450,6 +446,7 @@
         .footer-title:after {
             width: 50px;
             height: 3px;
+            background: var(--primary-light);
             background: var(--primary-light);
         }
 
@@ -498,14 +495,17 @@
             .village-name {
                 font-size: 2rem;
             }
+
             .village-subtitle {
                 font-size: 0.9rem;
             }
+
             .header-container {
                 flex-direction: column;
                 text-align: center;
                 gap: 15px;
             }
+
             .logo-section {
                 justify-content: center;
             }
@@ -536,6 +536,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Top Bar -->
@@ -547,9 +548,9 @@
                     महाराष्ट्र शासन | GOVERNMENT OF MAHARASHTRA
                 </div>
                 <div class="col-md-6 d-flex justify-content-end align-items-center gap-3 flex-wrap">
-                    <a href="mailto:gptelwade1947@gmail.com" style="color: var(--accent);">
+                    <a href="mailto:gpWavdungi1947@gmail.com" style="color: var(--accent);">
                         <i class="fas fa-envelope me-1"></i>
-                        gptelwade1947@gmail.com
+                        gpWavdungi1947@gmail.com
                     </a>
                     <div id="google_translate_element"></div>
                 </div>
@@ -564,439 +565,495 @@
                 <div class="logo-section d-flex align-items-center gap-3">
                     <img src="https://placehold.co/70x70/C44000/FFF?text=GP" alt="ग्रामपंचायत लोगो" class="logo">
                     <div class="village-info">
-                        <h2 class="village-name">तेलवडे / Telwade </h2>
+                        <!-- Village name remains orange -->
+                        <h2 class="village-name">वावडूंगी/ Wavdungi </h2>
+
                     </div>
-                </div>
-                <div class="header-badges d-flex gap-2">
-                    <span class="badge header-badge">डिजिटल ग्रामपंचायत</span>
-                    <span class="badge header-badge secondary">स्वच्छ भारत अभियान</span>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light nav-bar">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light nav-bar">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./index.html">
+                                <i class="fas fa-home me-1"></i> मुखपृष्ठ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-users me-1"></i> पदाधिकारी
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-info-circle me-1"></i> गावाची माहिती
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-phone-alt me-1"></i> महत्वाचे नंबर
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="schemesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-landmark me-1"></i> शासकीय योजना <i class="fas fa-chevron-down ms-1"
+                                    style="font-size: 0.7rem;"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="schemesDropdown">
+                                <li><a class="dropdown-item" href="#">१५ वित्त आयोग</a></li>
+                                <li><a class="dropdown-item" href="#">जल जीवन मिशन</a></li>
+                                <li><a class="dropdown-item" href="#">प्रधान मंत्री आवास योजना</a></li>
+                                <li><a class="dropdown-item" href="#">महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार हमी
+                                        योजना</a></li>
+                                <li><a class="dropdown-item" href="#">तांडा/वस्ती योजना</a></li>
+                                <li><a class="dropdown-item" href="#">अनुसूचीत जाती व नवबौध्द विकास</a></li>
+                                <li><a class="dropdown-item" href="#">रमाई आवास योजना</a></li>
+                                <li><a class="dropdown-item" href="#">शबरी आदिवासी घरकुल योजना</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="beneficiaryDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-users-line me-1"></i> लाभार्थी रजिस्टर <i
+                                    class="fas fa-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="beneficiaryDropdown">
+                                <li><a class="dropdown-item" href="#">प्रधानमंत्री आवास योजना</a></li>
+                                <li><a class="dropdown-item" href="#">शबरी आवास योजना</a></li>
+                                <li><a class="dropdown-item" href="#">रमाई आवास योजना</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-user-check me-1"></i> नागरिकांसाठी सेवा
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-money-bill-wave me-1"></i> कर संकलन
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-comments me-1"></i> तक्रार द्या
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Marquee -->
+        <div class="marquee">
+            <div class="container">
+                <marquee behavior="scroll" direction="left">
+                    <i class="fas fa-bullhorn me-2" style="color: var(--primary);"></i>
+                    ग्रामपंचायत मध्ये स्वच्छता अभियान चालू आहे. सर्व नागरिकांनी सहभागी व्हावे.
+                    <span class="mx-3" style="color: var(--primary);">|</span>
+                    <i class="fas fa-tint me-2" style="color: var(--primary);"></i>
+                    पाणीपट्टी व घरपट्टी वेळेवर भरून सहकार्य करावे.
+                </marquee>
+            </div>
+        </div>
+
+        <!-- === MAIN CONTENT START === -->
+
+        <!-- Hero Carousel -->
+        <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active"
+                    style="background-image: url('https://placehold.co/1920x1080/C44000/FFF?text=GP+Office')">
+                    <div class="carousel-caption">
+                        <!-- Title remains white on dark background -->
+                        <h1 class="hero-title" data-aos="fade-up" style="color: var(--white) !important;">ग्रामपंचायत
+                            तेलवडे</h1>
+                        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">तुमचे सहर्ष स्वागत आहे!</p>
+                        <a href="#about" class="btn btn-primary mt-3" data-aos="fade-up" data-aos-delay="400">अधिक
+                            माहिती घ्या</a>
+                    </div>
+                </div>
+                <div class="carousel-item"
+                    style="background-image: url('https://placehold.co/1920x1080/FF7B00/FFF?text=Village+Scenery')">
+                    <div class="carousel-caption">
+                        <h1 class="hero-title" style="color: var(--white) !important;">आदर्श ग्राम</h1>
+                        <p class="hero-subtitle">स्वच्छ, सुंदर आणि डिजिटल गाव.</p>
+                    </div>
+                </div>
+                <div class="carousel-item"
+                    style="background-image: url('https://placehold.co/1920x1080/C44000/FFF?text=Community+Event')">
+                    <div class="carousel-caption">
+                        <h1 class="hero-title" style="color: var(--white) !important;">शासकीय योजना</h1>
+                        <p class="hero-subtitle">सर्व योजनांची माहिती एकाच ठिकाणी.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="./index.html">
-                            <i class="fas fa-home me-1"></i> मुखपृष्ठ
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./members.html">
-                            <i class="fas fa-users me-1"></i> पदाधिकारी
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./villageinfo.html">
-                            <i class="fas fa-info-circle me-1"></i> गावाची माहिती
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./impnumbers.html">
-                            <i class="fas fa-phone-alt me-1"></i> महत्वाचे नंबर
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="schemesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-landmark me-1"></i> शासकीय योजना <i class="fas fa-chevron-down ms-1" style="font-size: 0.7rem;"></i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="schemesDropdown">
-                            <li><a class="dropdown-item" href="#">१५ वित्त आयोग</a></li>
-                            <li><a class="dropdown-item" href="#">जल जीवन मिशन</a></li>
-                            <li><a class="dropdown-item" href="#">प्रधान मंत्री आवास योजना</a></li>
-                            <li><a class="dropdown-item" href="#">महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार हमी योजना</a></li>
-                            <li><a class="dropdown-item" href="#">तांडा/वस्ती योजना</a></li>
-                            <li><a class="dropdown-item" href="#">अनुसूचीत जाती व नवबौध्द विकास</a></li>
-                            <li><a class="dropdown-item" href="#">रमाई आवास योजना</a></li>
-                            <li><a class="dropdown-item" href="#">शबरी आदिवासी घरकुल योजना</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="beneficiaryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-users-line me-1"></i> लाभार्थी रजिस्टर <i class="fas fa-chevron-down ms-1" style="font-size: 0.7rem;"></i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="beneficiaryDropdown">
-                            <li><a class="dropdown-item" href="#">प्रधानमंत्री आवास योजना</a></li>
-                            <li><a class="dropdown-item" href="#">शबरी आवास योजना</a></li>
-                            <li><a class="dropdown-item" href="#">रमाई आवास योजना</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-user-check me-1"></i> नागरिकांसाठी सेवा
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-money-bill-wave me-1"></i> कर संकलन
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-comments me-1"></i> तक्रार द्या
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-    </nav>
 
-    <!-- Marquee -->
-    <div class="marquee">
-        <div class="container">
-            <marquee behavior="scroll" direction="left">
-                <i class="fas fa-bullhorn me-2" style="color: var(--primary);"></i>
-                ग्रामपंचायत मध्ये स्वच्छता अभियान चालू आहे. सर्व नागरिकांनी सहभागी व्हावे.
-                <span class="mx-3" style="color: var(--primary);">|</span>
-                <i class="fas fa-tint me-2" style="color: var(--primary);"></i>
-                पाणीपट्टी व घरपट्टी वेळेवर भरून सहकार्य करावे.
-            </marquee>
-        </div>
-    </div>
-
-    <!-- === MAIN CONTENT START === -->
-
-    <!-- NEW HERO SECTION -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 hero-content" data-aos="fade-right">
-                    <h1 class="hero-title">ग्रामपंचायत तेलवडे</h1>
-                    <p class="hero-subtitle">एक प्रगतीशील, डिजिटल आणि स्वच्छ गाव. आमच्या ग्रामपंचायतीत आपले स्वागत आहे. आम्ही सर्व नागरिकांना सर्वोत्तम सेवा पुरविण्यासाठी वचनबद्ध आहोत.</p>
-                    
-                    <div class="hero-buttons">
-                        <a href="#about" class="btn btn-primary">
-                            <i class="fas fa-info-circle me-2"></i> गावाबद्दल अधिक
-                        </a>
-                        <a href="#" class="btn btn-outline-primary" style="border-color: white; color: white;">
-                            <i class="fas fa-download me-2"></i> महत्वाचे फॉर्म
-                        </a>
-                    </div>
-                    
-                    <div class="hero-stats">
-                        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-                            <span class="stat-number">4,500+</span>
-                            <span class="stat-label">लोकसंख्या</span>
-                        </div>
-                        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">शासकीय योजना</span>
-                        </div>
-                        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-                            <span class="stat-number">850+</span>
-                            <span class="stat-label">लाभार्थी</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-                    <div class="hero-image">
-                        <img src="https://placehold.co/600x400/1E6EA7/FFF?text=Telwade+Village" alt="तेलवडे गावाचे दृश्य">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section py-5 py-md-5">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <img src="https://placehold.co/600x400/F0F0F0/333?text=Village+Hall" alt="गावाबद्दल" class="about-image img-fluid rounded" style="box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <h2 class="section-title left" style="text-align: left; margin-bottom: 2rem;">आमच्या गावाबद्दल</h2>
-                    <p class="fw-bold" style="color: var(--primary) !important;">एक प्रगतीशील आणि डिजिटल गाव</p>
-                    <p style="color: var(--text-light);">
-                        तेलवडे ग्रामपंचायत मध्ये आपले स्वागत आहे. आमचे गाव [जिल्हा] जिल्ह्यातील [तालुका] तालुक्यात वसलेले एक सुंदर गाव आहे. आम्ही तंत्रज्ञानाचा वापर करून आणि समाजाच्या सहभागातून गावाचा विकास करण्यासाठी कटिबद्ध आहोत.
-                    </p>
-                    <p style="color: var(--text-light);">
-                        आमच्या वेबसाइटचा उद्देश नागरिकांना सर्व शासकीय योजना, सेवा, आणि ग्रामपंचायतीच्या कामकाजाबद्दल पारदर्शक माहिती प्रदान करणे हा आहे.
-                    </p>
-                    <a href="#" class="btn btn-outline-primary mt-3">
-                        <i class="fas fa-info-circle me-1"></i> संपूर्ण माहिती
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Officers Section -->
-    <section class="officers-section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">मुख्य पदाधिकारी</h2>
-            <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card officer-card p-4">
-                        <div class="officer-img-wrapper mb-3">
-                            <img src="https://placehold.co/150x150/EEEEEE/333?text=S" alt="सरपंच" class="officer-img rounded-circle">
-                        </div>
-                        <h4 class="officer-name" style="color: var(--dark);">मान. सरपंच</h4>
-                        <p class="officer-role">[सरपंचाचे नाव]</p>
-                        <p class="text-light-emphasis small" style="color: var(--text-light) !important;">गावाच्या विकासासाठी कटिबद्ध, आमचे सरपंच नागरिकांच्या सेवेसाठी सदैव तत्पर आहेत.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card officer-card p-4">
-                        <div class="officer-img-wrapper mb-3">
-                            <img src="https://placehold.co/150x150/EEEEEE/333?text=U" alt="उपसरपंच" class="officer-img rounded-circle">
-                        </div>
-                        <h4 class="officer-name" style="color: var(--dark);">मान. उपसरपंच</h4>
-                        <p class="officer-role">[उपसरपंचाचे नाव]</p>
-                        <p class="text-light-emphasis small" style="color: var(--text-light) !important;">सरपंचांच्या कार्यात सक्रिय सहभाग आणि गावाच्या प्रगतीसाठी समर्पित व्यक्तिमत्त्व.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card officer-card p-4">
-                        <div class="officer-img-wrapper mb-3">
-                            <img src="https://placehold.co/150x150/EEEEEE/333?text=G" alt="ग्रामसेवक" class="officer-img rounded-circle">
-                        </div>
-                        <h4 class="officer-name" style="color: var(--dark);">मान. ग्रामसेवक</h4>
-                        <p class="officer-role">[ग्रामसेवकाचे नाव]</p>
-                        <p class="text-light-emphasis small" style="color: var(--text-light) !important;">ग्रामपंचायतीचे प्रशासकीय प्रमुख, शासकीय योजनांची अंमलबजावणी करणारे मुख्य अधिकारी.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Village Stats Section -->
-    <section class="stats-section" id="stats-section">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-3 col-6" data-aos="fade-up">
-                    <div class="counter-box p-4 text-center">
-                        <i class="fas fa-users counter-icon"></i>
-                        <h3 class="counter-number" data-target="4500">0</h3>
-                        <p class="counter-title">एकूण लोकसंख्या</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="counter-box p-4 text-center">
-                        <i class="fas fa-home counter-icon"></i>
-                        <h3 class="counter-number" data-target="1200">0</h3>
-                        <p class="counter-title">एकूण घरे</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="counter-box p-4 text-center">
-                        <i class="fas fa-landmark counter-icon"></i>
-                        <h3 class="counter-number" data-target="15">0</h3>
-                        <p class="counter-title">शासकीय योजना</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="counter-box p-4 text-center">
-                        <i class="fas fa-users-line counter-icon"></i>
-                        <h3 class="counter-number" data-target="850">0</h3>
-                        <p class="counter-title">लाभार्थी</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Gallery Section -->
-    <section class="gallery-section py-5 py-md-5" id="gallery">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">आमची गॅलरी</h2>
-            <div class="row g-4">
-                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://placehold.co/400x300/F0F0F0/333?text=Gallery+Image+1" alt="Gallery Image 1" class="gallery-img w-100">
-                </div>
-                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://placehold.co/400x300/F0F0F0/333?text=Gallery+Image+2" alt="Gallery Image 2" class="gallery-img w-100">
-                </div>
-                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://placehold.co/400x300/F0F0F0/333?text=Gallery+Image+3" alt="Gallery Image 3" class="gallery-img w-100">
-                </div>
-                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="https://placehold.co/400x300/F0F0F0/333?text=Gallery+Image+4" alt="Gallery Image 4" class="gallery-img w-100">
-                </div>
-                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="500">
-                    <img src="https://placehold.co/400x300/F0F0F0/333?text=Gallery+Image+5" alt="Gallery Image 5" class="gallery-img w-100">
-                </div>
-                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="600">
-                    <img src="https://placehold.co/400x300/F0F0F0/333?text=Gallery+Image+6" alt="Gallery Image 6" class="gallery-img w-100">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- === MAIN CONTENT END === -->
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
+        <!-- About Section -->
+        <section id="about" class="about-section py-5 py-md-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4 mb-4" data-aos="fade-right">
-                        <img src="https://placehold.co/70x70/FF7B00/FFF?text=GP" alt="ग्रामपंचायत लोगो" class="footer-logo rounded-circle mb-3">
-                        <h5 class="footer-title">ग्रामपंचायतीची सर्वसाधारण माहिती</h5>
-                        <p>
-                            ग्रामपंचायतीचे नाव : तेलवडे / Telwade <br>
-                            Email ID: <a href="mailto:gptelwade1947@gmail.com" style="color: var(--accent);">gptelwade1947@gmail.com</a> <br>
-                            सेन्सस कोड : ४०२४०१ <br>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <img src="https://placehold.co/600x400/F0F0F0/333?text=Village+Hall" alt="गावाबद्दल"
+                            class="about-image img-fluid rounded" style="box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <h2 class="section-title left" style="text-align: left; margin-bottom: 2rem;">आमच्या गावाबद्दल
+                        </h2>
+                        <p class="fw-bold" style="color: var(--primary) !important;">एक प्रगतीशील आणि डिजिटल गाव</p>
+                        <p style="color: var(--text-light);">
+                            वावडूंगी हे महाराष्ट्र राज्यातील रायगड जिल्ह्यातील मुरुड तालुक्यात वसलेले एक महत्त्वपूर्ण व
+                            सुंदर गाव आहे. हे गाव मुरुड पंचायत समिती व रायगड जिल्हा परिषद यांच्या अखत्यारीत येते.
+
+                            वावडूंगी हे ग्रामपंचायतीचे मुख्यालय असून या ग्रामपंचायतीमध्ये वावडूंगी, सायगा आणि महालोर ही
+                            तीन गावे समाविष्ट आहेत.
+                            गावाची एकूण लोकसंख्या सुमारे ९८७ आहे.
                         </p>
-                        <div class="social-links mt-3 d-flex gap-2">
-                            <a href="#" class="btn btn-sm" title="Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="btn btn-sm" title="Whatsapp">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a href="#" class="btn btn-sm" title="Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="btn btn-sm" title="YouTube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
+                        <p style="color: var(--text-light);">
+                            हे गाव रायगड जिल्हा मुख्यालयापासून सुमारे ६० किलोमीटर अंतरावर आहे.
+                            गावाचे वातावरण शांत आणि निसर्गरम्य आहे. येथील लोक मेहनती, सहकार्यशील आणि एकमेकांशी ऐक्याने
+                            राहणारे आहेत.
+
+                            गावात शेती हा मुख्य व्यवसाय असून भात, नाचणी, आणि विविध हंगामी पिके घेतली जातात. तसेच काही
+                            लोक रोजगाराच्या शोधात जवळच्या शहरांकडेही जातात.
+                            गावात ग्रामपंचायत कार्यालय, शाळा, मंदिर, आणि अंगणवाडी केंद्र यांसारख्या सोयी उपलब्ध आहेत.
+
+                            वावडूंगी हे गाव ग्रामीण स्वराज्याच्या संकल्पनेचे उत्तम उदाहरण आहे, जिथे ग्रामस्थ एकत्र येऊन
+                            गावाच्या विकासासाठी प्रयत्नशील असतात.
+                        </p>
+                        <a href="#" class="btn btn-outline-primary mt-3">
+                            <i class="fas fa-info-circle me-1"></i> संपूर्ण माहिती
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Officers Section -->
+        <section class="officers-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">मुख्य पदाधिकारी</h2>
+                <div class="row g-4">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card officer-card p-4">
+                            <div class="officer-img-wrapper mb-3">
+                                <img src="https://placehold.co/150x150/EEEEEE/333?text=S" alt="सरपंच"
+                                    class="officer-img rounded-circle">
+                            </div>
+                            <!-- Officer Name is now charcoal dark -->
+                            <h4 class="officer-name" style="color: var(--dark);">मान. सरपंच</h4>
+                            <p class="officer-role">[सरपंचाचे नाव]</p>
+                            <p class="text-light-emphasis small" style="color: var(--text-light) !important;">गावाच्या
+                                विकासासाठी कटिबद्ध, आमचे सरपंच नागरिकांच्या सेवेसाठी सदैव तत्पर आहेत.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4" data-aos="fade-up">
-                        <h5 class="footer-title">द्रुत लिंक</h5>
-                        <div class="d-flex flex-column gap-2 quick-links" style="font-size: 0.95rem;">
-                            <a href="./index.html"><i class="fas fa-chevron-right me-2" style="font-size: 0.7em; color: var(--primary-light);"></i> मुख्य पृष्ठ</a>
-                            <a href="#"><i class="fas fa-chevron-right me-2" style="font-size: 0.7em; color: var(--primary-light);"></i> ग्रामपंचायती विषयी</a>
-                            <a href="#"><i class="fas fa-chevron-right me-2" style="font-size: 0.7em; color: var(--primary-light);"></i> आर्थिक माहिती</a>
-                            <a href="#"><i class="fas fa-chevron-right me-2" style="font-size: 0.7em; color: var(--primary-light);"></i> योजना व कामे</a>
-                            <a href="#"><i class="fas fa-chevron-right me-2" style="font-size: 0.7em; color: var(--primary-light);"></i> ऑनलाइन सेवा</a>
-                            <a href="#gallery"><i class="fas fa-chevron-right me-2" style="font-size: 0.7em; color: var(--primary-light);"></i> गॅलरी</a>
-                            <a href="#"><i class="fas fa-chevron-right me-2" style="font-size: 0.7em; color: var(--primary-light);"></i> संपर्क</a>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card officer-card p-4">
+                            <div class="officer-img-wrapper mb-3">
+                                <img src="https://placehold.co/150x150/EEEEEE/333?text=U" alt="उपसरपंच"
+                                    class="officer-img rounded-circle">
+                            </div>
+                            <!-- Officer Name is now charcoal dark -->
+                            <h4 class="officer-name" style="color: var(--dark);">मान. उपसरपंच</h4>
+                            <p class="officer-role">[उपसरपंचाचे नाव]</p>
+                            <p class="text-light-emphasis small" style="color: var(--text-light) !important;">
+                                सरपंचांच्या कार्यात सक्रिय सहभाग आणि गावाच्या प्रगतीसाठी समर्पित व्यक्तिमत्त्व.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4" data-aos="fade-left">
-                        <h5 class="footer-title">संपर्क</h5>
-                        <div class="contact-info" style="font-size: 0.95rem;">
-                            <p class="d-flex align-items-start mb-2">
-                                <i class="fas fa-map-marker-alt me-3 mt-1"></i>
-                                <span>
-                                    ग्रामपंचायत तेलवडे, <br>
-                                    ता.मुरुड , जि. रायगड , <br>
-                                    पिन. ४०२४०१
-                                </span>
-                            </p>
-                            <p class="d-flex align-items-center mb-2">
-                                <i class="fas fa-phone-alt me-3"></i>
-                                <span>+९१ 9370694651</span>
-                            </p>
-                            <p class="d-flex align-items-center mb-2">
-                                <i class="fas fa-envelope me-3"></i>
-                                <span>gptelwade1947@gmail.com</span>
-                            </p>
-                            <p class="d-flex align-items-center mb-2">
-                                <i class="fas fa-clock me-3"></i>
-                                <span>सोम-शनि: ९:०० AM - ५:०० PM</span>
-                            </p>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card officer-card p-4">
+                            <div class="officer-img-wrapper mb-3">
+                                <img src="https://placehold.co/150x150/EEEEEE/333?text=G" alt="ग्रामसेवक"
+                                    class="officer-img rounded-circle">
+                            </div>
+                            <!-- Officer Name is now charcoal dark -->
+                            <h4 class="officer-name" style="color: var(--dark);">मान. ग्रामसेवक</h4>
+                            <p class="officer-role">[ग्रामसेवकाचे नाव]</p>
+                            <p class="text-light-emphasis small" style="color: var(--text-light) !important;">
+                                ग्रामपंचायतीचे प्रशासकीय प्रमुख, शासकीय योजनांची अंमलबजावणी करणारे मुख्य अधिकारी.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="copyright py-3 text-center">
+        </section>
+
+        <!-- Village Stats Section - NEW CONTRAST BACKGROUND -->
+        <section class="stats-section" id="stats-section">
             <div class="container">
-                <p class="mb-2 small">© २०२५ तेलवडे / Telwade. सर्व हक्क राखीव.</p>
-                <p class="mb-2">
-                    <span class="visitor-count">
-                        <i class="fas fa-eye me-1"></i>
-                        <span id="visitorCounter">12896</span> भेटी
-                    </span>
-                </p>
-                <p class="mb-0 small">
-                    Design & Developed By
-                    <a href="#" class="developer-link">KUMIRADI INFOTECH </a>
-                    [7507962607]
-                </p>
+                <div class="row g-4">
+                    <div class="col-md-3 col-6" data-aos="fade-up">
+                        <div class="counter-box p-4 text-center">
+                            <i class="fas fa-users counter-icon"></i>
+                            <h3 class="counter-number" data-target="4500">0</h3>
+                            <p class="counter-title">एकूण लोकसंख्या</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="counter-box p-4 text-center">
+                            <i class="fas fa-home counter-icon"></i>
+                            <h3 class="counter-number" data-target="1200">0</h3>
+                            <p class="counter-title">एकूण घरे</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="counter-box p-4 text-center">
+                            <i class="fas fa-landmark counter-icon"></i>
+                            <h3 class="counter-number" data-target="15">0</h3>
+                            <p class="counter-title">शासकीय योजना</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="counter-box p-4 text-center">
+                            <i class="fas fa-users-line counter-icon"></i>
+                            <h3 class="counter-number" data-target="850">0</h3>
+                            <p class="counter-title">लाभार्थी</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
+        </section>
 
- 
+        <!-- Gallery Section -->
+        <section class="gallery-section py-5 py-md-5" id="gallery">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">आमची गॅलरी</h2>
+                <div class="row g-4">
+                    <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="https://placehold.co/400x300/F0F0F0/333?text=Gallery+Image+1" alt="Gallery Image 1"
+                            class="gallery-img w-100">
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="https://placehold.co/400x300/F0F0F0/333?text=Gallery+Image+2" alt="Gallery Image 2"
+                            class="gallery-img w-100">
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="https://placehold.co/400x300/F0F0F0/333?text=Gallery+Image+3" alt="Gallery Image 3"
+                            class="gallery-img w-100">
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="400">
+                        <img src="https://placehold.co/400x300/F0F0F0/333?text=Gallery+Image+4" alt="Gallery Image 4"
+                            class="gallery-img w-100">
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="500">
+                        <img src="https://placehold.co/400x300/F0F0F0/333?text=Gallery+Image+5" alt="Gallery Image 5"
+                            class="gallery-img w-100">
+                    </div>
+                    <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="600">
+                        <img src="https://placehold.co/400x300/F0F0F0/333?text=Gallery+Image+6" alt="Gallery Image 6"
+                            class="gallery-img w-100">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === MAIN CONTENT END === -->
 
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true,
-            easing: 'ease-in-out',
-        });
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 mb-4" data-aos="fade-right">
+                            <!-- Use placeholder image -->
+                            <img src="https://placehold.co/70x70/FF7B00/FFF?text=GP" alt="ग्रामपंचायत लोगो"
+                                class="footer-logo rounded-circle mb-3">
+                            <h5 class="footer-title">ग्रामपंचायतीची सर्वसाधारण माहिती</h5>
+                            <p>
+                                ग्रामपंचायतीचे नाव : वावडूंगी/ Wavdungi <br>
+                                Email ID: <a href="mailto:gpWavdungi1947@gmail.com"
+                                    style="color: var(--accent);">gpWavdungi1947@gmail.com</a> <br>
+                                सेन्सस कोड : ४०२४०१ <br>
+                            </p>
+                            <div class="social-links mt-3 d-flex gap-2">
+                                <a href="#" class="btn btn-sm" title="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="btn btn-sm" title="Whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="#" class="btn btn-sm" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="btn btn-sm" title="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4" data-aos="fade-up">
+                            <h5 class="footer-title">द्रुत लिंक</h5>
+                            <div class="d-flex flex-column gap-2 quick-links" style="font-size: 0.95rem;">
+                                <a href="./index.html"><i class="fas fa-chevron-right me-2"
+                                        style="font-size: 0.7em; color: var(--primary-light);"></i> मुख्य पृष्ठ</a>
+                                <a href="#"><i class="fas fa-chevron-right me-2"
+                                        style="font-size: 0.7em; color: var(--primary-light);"></i> ग्रामपंचायती
+                                    विषयी</a>
+                                <a href="#"><i class="fas fa-chevron-right me-2"
+                                        style="font-size: 0.7em; color: var(--primary-light);"></i> आर्थिक माहिती</a>
+                                <a href="#"><i class="fas fa-chevron-right me-2"
+                                        style="font-size: 0.7em; color: var(--primary-light);"></i> योजना व कामे</a>
+                                <a href="#"><i class="fas fa-chevron-right me-2"
+                                        style="font-size: 0.7em; color: var(--primary-light);"></i> ऑनलाइन सेवा</a>
+                                <a href="#gallery"><i class="fas fa-chevron-right me-2"
+                                        style="font-size: 0.7em; color: var(--primary-light);"></i> गॅलरी</a>
+                                <a href="#"><i class="fas fa-chevron-right me-2"
+                                        style="font-size: 0.7em; color: var(--primary-light);"></i> संपर्क</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4" data-aos="fade-left">
+                            <h5 class="footer-title">संपर्क</h5>
+                            <div class="contact-info" style="font-size: 0.95rem;">
+                                <p class="d-flex align-items-start mb-2">
+                                    <i class="fas fa-map-marker-alt me-3 mt-1"></i>
+                                    <span>
+                                        ग्रामपंचायत तेलवडे, <br>
+                                        ता.मुरुड , जि. रायगड , <br>
+                                        पिन. ४०२४०१
+                                    </span>
+                                </p>
+                                <p class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-phone-alt me-3"></i>
+                                    <span>+९१ 9370694651</span>
+                                </p>
+                                <p class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-envelope me-3"></i>
+                                    <span>gpWavdungi1947@gmail.com</span>
+                                </p>
+                                <p class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-clock me-3"></i>
+                                    <span>सोम-शनि: ९:०० AM - ५:०० PM</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright py-3 text-center">
+                <div class="container">
+                    <p class="mb-2 small">© २०२५ वावडूंगी/ Wavdungi. सर्व हक्क राखीव.</p>
+                    <p class="mb-2">
+                        <span class="visitor-count">
+                            <i class="fas fa-eye me-1"></i>
+                            <span id="visitorCounter">12896</span> भेटी
+                        </span>
+                    </p>
+                    <p class="mb-0 small">
+                        Design & Developed By
+                        <a href="#" class="developer-link">KUMIRADI INFOTECH </a>
+                        [7507962607]
+                    </p>
+                </div>
+            </div>
+        </footer>
 
-        // Counter Animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const counters = document.querySelectorAll('.counter-number');
-            const statsSection = document.getElementById('stats-section');
-            let hasAnimated = false;
+        <!-- Accessibility Button -->
+        <button class="accessibility-btn fixed-bottom end-0 me-3 mb-3" onclick="toggleAccessibility()"
+            title="Accessibility Options"
+            style="background: var(--primary); color: var(--white); border-radius: 50px; border: none; padding: 12px 20px; box-shadow: 0 4px 15px rgba(196, 64, 0, 0.5); transition: var(--transition); z-index: 1010;">
+            <i class="fas fa-universal-access"></i>
+            <span id="accessibility-text" class="ms-2">सुलभता</span>
+        </button>
 
-            const updateCounter = (counter) => {
-                const target = +counter.getAttribute('data-target');
-                const speed = 200; 
-                const increment = target / speed;
-                
-                let current = 0;
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-                const animate = () => {
-                    current += increment;
-                    if (current < target) {
-                        counter.innerText = Math.ceil(current).toLocaleString('en-IN');
-                        setTimeout(animate, 10);
-                    } else {
-                        counter.innerText = target.toLocaleString('en-IN');
-                    }
-                };
-                animate();
-            };
-
-            // Use Intersection Observer to trigger animation on scroll
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !hasAnimated) {
-                        counters.forEach(counter => {
-                            counter.innerText = '0'; 
-                            updateCounter(counter);
-                        });
-                        hasAnimated = true;
-                        observer.unobserve(statsSection);
-                    }
-                });
-            }, {
-                threshold: 0.5
+        <script>
+            // Initialize AOS
+            AOS.init({
+                duration: 1000,
+                once: true,
+                easing: 'ease-in-out',
             });
 
-            if (statsSection) {
-                observer.observe(statsSection);
-            }
-        });
+            // --- Counter Animation ---
+            document.addEventListener('DOMContentLoaded', function () {
+                const counters = document.querySelectorAll('.counter-number');
+                const statsSection = document.getElementById('stats-section');
+                let hasAnimated = false;
 
-        // Accessibility Function
-        function toggleAccessibility() {
-            const body = document.body;
-            const buttonText = document.getElementById('accessibility-text');
-            
-            // Toggle high-contrast mode and font-size increase
-            body.classList.toggle('accessibility-mode');
-            body.classList.toggle('font-resize');
-            
-            // Update button text
-            if (body.classList.contains('accessibility-mode')) {
-                buttonText.innerText = 'सामान्य मोड';
-            } else {
-                buttonText.innerText = 'सुलभता';
+                const updateCounter = (counter) => {
+                    const target = +counter.getAttribute('data-target');
+                    const speed = 200;
+                    const increment = target / speed;
+
+                    let current = 0;
+
+                    const animate = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.innerText = Math.ceil(current).toLocaleString('en-IN');
+                            setTimeout(animate, 10);
+                        } else {
+                            counter.innerText = target.toLocaleString('en-IN');
+                        }
+                    };
+                    animate();
+                };
+
+                // Use Intersection Observer to trigger animation on scroll
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !hasAnimated) {
+                            counters.forEach(counter => {
+                                counter.innerText = '0';
+                                updateCounter(counter);
+                            });
+                            hasAnimated = true;
+                            observer.unobserve(statsSection);
+                        }
+                    });
+                }, {
+                    threshold: 0.5
+                });
+
+                if (statsSection) {
+                    observer.observe(statsSection);
+                }
+            });
+
+            // --- Accessibility Function ---
+            function toggleAccessibility() {
+                const body = document.body;
+                const buttonText = document.getElementById('accessibility-text');
+
+                // Toggle high-contrast mode and font-size increase
+                body.classList.toggle('accessibility-mode');
+                body.classList.toggle('font-resize');
+
+                // Update button text
+                if (body.classList.contains('accessibility-mode')) {
+                    buttonText.innerText = 'सामान्य मोड';
+                } else {
+                    buttonText.innerText = 'सुलभता';
+                }
             }
-        }
-    </script>
+        </script>
 
 </body>
+
 </html>
