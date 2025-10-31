@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page Title -->
-    <title>Gram Panchayat Telwade - Modern Navy Theme</title>
+    <title>Gram Panchayat Telwade - Balanced Theme</title>
 
     <!-- CSS Libraries -->
     <link
@@ -36,16 +36,21 @@
     <!-- Consolidated Styles -->
     <style>
         :root {
-            /* NEW: Modern, Professional, High-Contrast Palette (Navy & Sky Blue) */
-            --primary: #0F4C75; /* Deep Navy Blue */
-            --primary-light: #3299CC; /* Sky Blue Accent */
-            --primary-dark: #00335C; /* Darker Navy */
-            --secondary: #FFC300; /* Bright Yellow/Gold Accent for badges/highlights */
-            --secondary-light: #FFDA6A; 
-            --secondary-dark: #CC9900; 
-            --accent: #BBE1FA; /* Very light blue for subtle backgrounds */
+            /* Vibrant, Warm, High-Visibility Orange Palette */
+            --primary: #C44000; /* Deep Burnt Orange for main accents/CTAs */
+            --primary-light: #FF7B00; /* Bright Orange/Amber Accent */
+            --primary-dark: #A33600; /* Darker Orange/Brown for header/footer */
+            --secondary: #FFC300; /* Gold/Yellow Accent for badges/highlights */
+            
+            /* NEW CONTRAST COLOR: Deep Slate Gray/Navy for large sections */
+            --contrast-dark: #1E293B; 
+
+            --accent: #FFF0E5; /* Very light cream/pale orange for subtle backgrounds */
             --light: #F5F7FA; /* Clean Light Gray/Off-White Background */
-            --dark: #1A1A1A; /* Near Black */
+            
+            /* Body Text Color: Very Dark Gray (Charcoal) - Soft on the eyes */
+            --dark: #333333; 
+            
             --text: var(--dark);
             --text-light: #555555;
             --background: var(--light);
@@ -112,22 +117,29 @@
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 0.5rem;
-            color: var(--primary); /* Use deep navy for headings */
+            /* Headings are now dark charcoal by default, reducing orange saturation */
+            color: var(--dark); 
         }
+        
+        /* Primary Headings remain orange for impact */
+        .village-name, .section-title, .hero-title {
+             color: var(--primary); 
+        }
+
 
         a {
             text-decoration: none;
             transition: var(--transition);
         }
         
-        /* Button Styles: Sharp blue */
+        /* Button Styles: Bright Orange CTA */
         .btn-primary {
             background: var(--primary-light);
             border: none;
             border-radius: 30px; 
             padding: 12px 30px;
             font-weight: 600;
-            box-shadow: 0 6px 15px rgba(50, 153, 204, 0.4);
+            box-shadow: 0 6px 15px rgba(255, 123, 0, 0.4); 
             transition: var(--transition);
             color: var(--white);
             letter-spacing: 0.5px;
@@ -135,8 +147,8 @@
 
         .btn-primary:hover {
             transform: translateY(-4px);
-            box-shadow: 0 10px 20px rgba(50, 153, 204, 0.6);
-            background: var(--primary); /* Transition to primary dark on hover */
+            box-shadow: 0 10px 20px rgba(255, 123, 0, 0.6); 
+            background: var(--primary); 
             color: var(--white);
         }
 
@@ -153,7 +165,7 @@
             background-color: var(--primary);
             color: var(--white);
             transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(15, 76, 117, 0.3);
+            box-shadow: 0 4px 10px rgba(196, 64, 0, 0.3); 
         }
 
         .section-title {
@@ -161,7 +173,7 @@
             padding-bottom: 15px;
             margin-bottom: 3rem;
             text-align: center;
-            color: var(--primary);
+            color: var(--primary); /* Main sections titles remain orange */
             font-size: 2.2rem;
             font-weight: 800;
         }
@@ -174,8 +186,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            /* Accent color */
-            background: var(--primary-light);
+            background: var(--primary-light); 
             border-radius: 4px;
         }
 
@@ -193,12 +204,11 @@
         .card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-hover);
-            border-color: rgba(15, 76, 117, 0.1);
+            border-color: rgba(0, 0, 0, 0.1);
         }
 
         /* Header Styles */
         .top-bar {
-            /* Primary dark color */
             background: var(--primary-dark);
             color: var(--white);
             padding: 8px 0;
@@ -216,13 +226,13 @@
             width: 70px;
             border-radius: 50%;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border: 3px solid var(--primary-light); /* Sky Blue border */
+            border: 3px solid var(--primary-light); 
             padding: 3px;
             object-fit: cover;
         }
 
         .village-name {
-            color: var(--primary);
+            color: var(--primary); /* Keep village name orange for identity */
             font-weight: 800;
             font-size: 2.5rem;
             display: inline-block;
@@ -233,7 +243,7 @@
             display: block;
             width: 80%;
             height: 2px;
-            background: var(--primary-light); /* Sky Blue underline */
+            background: var(--primary-light); 
             margin-top: 5px;
             border-radius: 1px;
         }
@@ -250,18 +260,18 @@
         .header-badge {
             background: var(--primary-light);
             color: var(--dark);
-            box-shadow: 0 4px 10px rgba(50, 153, 204, 0.2);
+            box-shadow: 0 4px 10px rgba(255, 123, 0, 0.4); 
         }
 
         .header-badge.secondary {
-            background: var(--secondary); /* Gold accent for secondary badge */
+            background: var(--secondary); 
             color: var(--dark);
             box-shadow: 0 4px 10px rgba(255, 195, 0, 0.5);
         }
 
         /* Navigation Bar */
         .nav-bar {
-            background-color: #1479ca;
+            background-color: var(--white);
             padding: 0;
             position: sticky;
             top: 0;
@@ -283,7 +293,6 @@
         }
 
         .marquee {
-            /* Light blue background with primary navy text */
             background-color: var(--accent);
             color: var(--primary-dark);
             padding: 10px 0;
@@ -329,15 +338,12 @@
 
         .officer-card {
             text-align: center;
-            border-top: 4px solid var(--primary-light); /* Sky blue accent border */
+            /* Changed accent border from primary-light (bright orange) to secondary (gold) */
+            border-top: 4px solid var(--secondary); 
             box-shadow: var(--shadow);
         }
         
-        .officer-img {
-            border: 5px solid var(--light);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
+        /* Officer Role is a subtle orange accent */
         .officer-role {
             color: var(--primary-light);
             font-weight: 600;
@@ -345,21 +351,21 @@
             letter-spacing: 1px;
         }
 
-        /* Stats Section - Clean White on Navy */
+        /* Stats Section - NEW CONTRAST DARK BACKGROUND */
         .stats-section {
             padding: 80px 0;
-            background: var(--primary); /* Deep Navy Blue Background */
+            background: var(--contrast-dark); /* Deep Slate Gray/Navy Background */
             color: var(--white);
         }
         
         .counter-box {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08); /* Darker background accent */
             border-radius: var(--border-radius);
             transition: var(--transition);
         }
         
         .counter-box:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.15);
             transform: translateY(-5px);
         }
         
@@ -386,12 +392,13 @@
         /* Gallery Section */
         .gallery-img {
             border-radius: var(--border-radius);
-            border: 3px solid var(--primary-light); /* Sky blue border for gallery */
+            /* Changed border from bright orange to subtle light gray/shadow */
+            border: 3px solid var(--light); 
+            box-shadow: var(--shadow);
         }
 
         /* Footer */
         .footer {
-            /* Darker Navy background */
             background: var(--primary-dark);
             color: var(--accent);
             padding-top: 60px;
@@ -405,7 +412,7 @@
         .footer-title:after {
             width: 50px;
             height: 3px;
-            background: var(--primary-light); /* Sky blue accent */
+            background: var(--primary-light); 
         }
 
         .quick-links a {
@@ -494,9 +501,10 @@
             <div class="header-container d-flex justify-content-between align-items-center">
                 <div class="logo-section d-flex align-items-center gap-3">
                     <!-- Use a placeholder image. Replace with your actual logo path -->
-                    <img src="https://placehold.co/70x70/0F4C75/FFF?text=GP" alt="ग्रामपंचायत लोगो" class="logo">
+                    <img src="https://placehold.co/70x70/C44000/FFF?text=GP" alt="ग्रामपंचायत लोगो" class="logo">
                     <div class="village-info">
-                        <h2 class="village-name">तेलवडे / Telwade</h2>
+                        <!-- Village name remains orange -->
+                        <h2 class="village-name">तेलवडे / Telwade </h2>
                         <div class="village-subtitle">ग्रामपंचायत | Gram Panchayat</div>
                     </div>
                 </div>
@@ -611,22 +619,23 @@
             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: url('https://placehold.co/1920x1080/0F4C75/FFF?text=GP+Office')">
+            <div class="carousel-item active" style="background-image: url('https://placehold.co/1920x1080/C44000/FFF?text=GP+Office')">
                 <div class="carousel-caption">
-                    <h1 class="hero-title" data-aos="fade-up">ग्रामपंचायत तेलवडे</h1>
+                    <!-- Title remains white on dark background -->
+                    <h1 class="hero-title" data-aos="fade-up" style="color: var(--white) !important;">ग्रामपंचायत तेलवडे</h1>
                     <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">तुमचे सहर्ष स्वागत आहे!</p>
                     <a href="#about" class="btn btn-primary mt-3" data-aos="fade-up" data-aos-delay="400">अधिक माहिती घ्या</a>
                 </div>
             </div>
-            <div class="carousel-item" style="background-image: url('https://placehold.co/1920x1080/3299CC/FFF?text=Village+Scenery')">
+            <div class="carousel-item" style="background-image: url('https://placehold.co/1920x1080/FF7B00/FFF?text=Village+Scenery')">
                 <div class="carousel-caption">
-                    <h1 class="hero-title">आदर्श ग्राम</h1>
+                    <h1 class="hero-title" style="color: var(--white) !important;">आदर्श ग्राम</h1>
                     <p class="hero-subtitle">स्वच्छ, सुंदर आणि डिजिटल गाव.</p>
                 </div>
             </div>
-            <div class="carousel-item" style="background-image: url('https://placehold.co/1920x1080/0F4C75/FFF?text=Community+Event')">
+            <div class="carousel-item" style="background-image: url('https://placehold.co/1920x1080/C44000/FFF?text=Community+Event')">
                 <div class="carousel-caption">
-                    <h1 class="hero-title">शासकीय योजना</h1>
+                    <h1 class="hero-title" style="color: var(--white) !important;">शासकीय योजना</h1>
                     <p class="hero-subtitle">सर्व योजनांची माहिती एकाच ठिकाणी.</p>
                 </div>
             </div>
@@ -675,7 +684,8 @@
                         <div class="officer-img-wrapper mb-3">
                             <img src="https://placehold.co/150x150/EEEEEE/333?text=S" alt="सरपंच" class="officer-img rounded-circle">
                         </div>
-                        <h4 class="officer-name" style="color: var(--primary);">मान. सरपंच</h4>
+                        <!-- Officer Name is now charcoal dark -->
+                        <h4 class="officer-name" style="color: var(--dark);">मान. सरपंच</h4>
                         <p class="officer-role">[सरपंचाचे नाव]</p>
                         <p class="text-light-emphasis small" style="color: var(--text-light) !important;">गावाच्या विकासासाठी कटिबद्ध, आमचे सरपंच नागरिकांच्या सेवेसाठी सदैव तत्पर आहेत.</p>
                     </div>
@@ -685,7 +695,8 @@
                         <div class="officer-img-wrapper mb-3">
                             <img src="https://placehold.co/150x150/EEEEEE/333?text=U" alt="उपसरपंच" class="officer-img rounded-circle">
                         </div>
-                        <h4 class="officer-name" style="color: var(--primary);">मान. उपसरपंच</h4>
+                         <!-- Officer Name is now charcoal dark -->
+                        <h4 class="officer-name" style="color: var(--dark);">मान. उपसरपंच</h4>
                         <p class="officer-role">[उपसरपंचाचे नाव]</p>
                         <p class="text-light-emphasis small" style="color: var(--text-light) !important;">सरपंचांच्या कार्यात सक्रिय सहभाग आणि गावाच्या प्रगतीसाठी समर्पित व्यक्तिमत्त्व.</p>
                     </div>
@@ -695,7 +706,8 @@
                         <div class="officer-img-wrapper mb-3">
                             <img src="https://placehold.co/150x150/EEEEEE/333?text=G" alt="ग्रामसेवक" class="officer-img rounded-circle">
                         </div>
-                        <h4 class="officer-name" style="color: var(--primary);">मान. ग्रामसेवक</h4>
+                         <!-- Officer Name is now charcoal dark -->
+                        <h4 class="officer-name" style="color: var(--dark);">मान. ग्रामसेवक</h4>
                         <p class="officer-role">[ग्रामसेवकाचे नाव]</p>
                         <p class="text-light-emphasis small" style="color: var(--text-light) !important;">ग्रामपंचायतीचे प्रशासकीय प्रमुख, शासकीय योजनांची अंमलबजावणी करणारे मुख्य अधिकारी.</p>
                     </div>
@@ -704,7 +716,7 @@
         </div>
     </section>
 
-    <!-- Village Stats Section -->
+    <!-- Village Stats Section - NEW CONTRAST BACKGROUND -->
     <section class="stats-section" id="stats-section">
         <div class="container">
             <div class="row g-4">
@@ -777,7 +789,7 @@
                 <div class="row">
                     <div class="col-md-4 mb-4" data-aos="fade-right">
                         <!-- Use placeholder image -->
-                        <img src="https://placehold.co/70x70/3299CC/FFF?text=GP" alt="ग्रामपंचायत लोगो" class="footer-logo rounded-circle mb-3">
+                        <img src="https://placehold.co/70x70/FF7B00/FFF?text=GP" alt="ग्रामपंचायत लोगो" class="footer-logo rounded-circle mb-3">
                         <h5 class="footer-title">ग्रामपंचायतीची सर्वसाधारण माहिती</h5>
                         <p>
                             ग्रामपंचायतीचे नाव : तेलवडे / Telwade <br>
@@ -850,7 +862,7 @@
                 </p>
                 <p class="mb-0 small">
                     Design & Developed By
-                    <a href="#" class="developer-link">KUMIRADI INFOTECH </a>
+                    <a href="#" class="developer-link">KUMIRADI INFOTECH </a>
                     [7507962607]
                 </p>
             </div>
@@ -858,7 +870,7 @@
     </footer>
 
     <!-- Accessibility Button -->
-    <button class="accessibility-btn fixed-bottom end-0 me-3 mb-3" onclick="toggleAccessibility()" title="Accessibility Options" style="background: var(--primary); color: var(--white); border-radius: 50px; border: none; padding: 12px 20px; box-shadow: 0 4px 15px rgba(15, 76, 117, 0.5); transition: var(--transition); z-index: 1010;">
+    <button class="accessibility-btn fixed-bottom end-0 me-3 mb-3" onclick="toggleAccessibility()" title="Accessibility Options" style="background: var(--primary); color: var(--white); border-radius: 50px; border: none; padding: 12px 20px; box-shadow: 0 4px 15px rgba(196, 64, 0, 0.5); transition: var(--transition); z-index: 1010;">
         <i class="fas fa-universal-access"></i>
         <span id="accessibility-text" class="ms-2">सुलभता</span>
     </button>
