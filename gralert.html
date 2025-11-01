@@ -616,38 +616,43 @@
     </div>
 
     <script>
-      // Add this script to each HTML page
-      document.addEventListener("DOMContentLoaded", function () {
-        const popupOverlay = document.getElementById("popupOverlay");
-        const closePopup = document.getElementById("closePopup");
+// Fixed Popup Script - Force popup to stay on top
+document.addEventListener("DOMContentLoaded", function () {
+    const popupOverlay = document.getElementById("popupOverlay");
+    const closePopup = document.getElementById("closePopup");
 
-        // Check if page was reloaded or it's first visit
-        const isReloaded = performance.navigation.type === 1;
-        const hasSeenPopup = sessionStorage.getItem("hasSeenPopup");
+    // Force highest z-index
+    popupOverlay.style.zIndex = "10000";
+    
+    // Show popup immediately
+    setTimeout(() => {
+        popupOverlay.style.display = "flex";
+        document.body.style.overflow = "hidden";
+        
+        // Double check z-index after display
+        popupOverlay.style.zIndex = "10000";
+    }, 10); // Reduced delay
 
-        // Show popup on first visit OR page reload
-        if (!hasSeenPopup || isReloaded) {
-          popupOverlay.style.display = "flex";
-          sessionStorage.setItem("hasSeenPopup", "true");
+    // Close functionality
+    function closePopupFunc() {
+        popupOverlay.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+
+    closePopup.addEventListener("click", closePopupFunc);
+
+    popupOverlay.addEventListener("click", function (e) {
+        if (e.target === popupOverlay) {
+            closePopupFunc();
         }
+    });
 
-        closePopup.addEventListener("click", function () {
-          popupOverlay.style.display = "none";
-        });
-
-        popupOverlay.addEventListener("click", function (e) {
-          if (e.target === popupOverlay) {
-            popupOverlay.style.display = "none";
-          }
-        });
-
-        // Close with Escape key
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape" && popupOverlay.style.display === "flex") {
-            popupOverlay.style.display = "none";
-          }
-        });
-      });
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && popupOverlay.style.display === "flex") {
+            closePopupFunc();
+        }
+    });
+});
     </script>
   </body>
 </html>

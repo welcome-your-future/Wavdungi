@@ -15,25 +15,17 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./styles/Navbar.css" />
-    <link rel="stylesheet" href="./styles/Homepage.css" />
+    <link rel="stylesheet" href="./styles/weather.css" />
+    <link rel="stylesheet" href="./styles/facilities.css" />
+    <link rel="stylesheet" href="./styles/videosection.css" />
+    <link rel="stylesheet" href="./styles/govtsec.css" />
+    <link rel="stylesheet" href="./styles/EAlert.css" />
     <link rel="stylesheet" href="./styles/Footer.css" />
-    <link rel="stylesheet" href="./styles/members.css" />
+    <link rel="stylesheet" href="./styles/media.css" />
+    <link rel="stylesheet" href="./styles/plantation.css" />
+    <link rel="stylesheet" href="./styles/Homepage.css" />
     <link rel="stylesheet" href="./styles/PopupLogo.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -286,7 +278,7 @@
 
       /* Navigation Bar */
       .nav-bar {
-        background-color: var(--white);
+        background-color: var(--secondary-dark);
         padding: 0;
         position: sticky;
         top: 0;
@@ -303,8 +295,8 @@
 
       .navbar-nav .nav-link:hover,
       .navbar-nav .nav-link.active {
-        color: var(--primary) !important;
-        border-color: var(--primary);
+        color: var(--primary-light) !important;
+        border-color: var(--primary-light);
       }
 
       .marquee {
@@ -409,6 +401,12 @@
         transform: scale(1.05);
       }
 
+      /* About Section */
+      .about-section {
+        padding: 80px 0;
+        background-color: var(--white);
+      }
+
       /* Officers Section */
       .officers-section {
         background-color: var(--white);
@@ -421,11 +419,158 @@
         box-shadow: var(--shadow);
       }
 
+      .officer-img-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      .officer-img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border: 3px solid var(--secondary-light);
+      }
+
+      .officer-name {
+        color: var(--dark);
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
       .officer-role {
         color: var(--secondary);
         font-weight: 600;
         font-size: 0.95rem;
         letter-spacing: 1px;
+        margin-bottom: 5px;
+      }
+
+      /* Government Officials Section */
+      .government-officials-container {
+        padding: 80px 0;
+        background-color: var(--light);
+      }
+
+      .officials-section {
+        margin-bottom: 60px;
+      }
+
+      .section-main-title {
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: var(--primary);
+        margin-bottom: 15px;
+        position: relative;
+        padding-bottom: 15px;
+      }
+
+      .section-main-title:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--primary-light);
+        border-radius: 4px;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        font-size: 1.1rem;
+        color: var(--text-light);
+        margin-bottom: 40px;
+      }
+
+      .officials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .official-card {
+        background: var(--white);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        transition: var(--transition);
+        text-align: center;
+      }
+
+      .official-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .official-image-container {
+        padding: 20px 20px 0;
+      }
+
+      .official-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid var(--secondary-light);
+      }
+
+      .official-content {
+        padding: 20px;
+      }
+
+      .official-name {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 8px;
+      }
+
+      .official-position-marathi {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 5px;
+      }
+
+      .official-position-english {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        margin-bottom: 10px;
+        font-style: italic;
+      }
+
+      .official-department {
+        font-size: 0.9rem;
+        color: var(--secondary);
+        margin-bottom: 15px;
+      }
+
+      .official-divider {
+        height: 2px;
+        background: var(--accent);
+        width: 50px;
+        margin: 0 auto;
+      }
+
+      /* E-Alert Section */
+      .service-card {
+        background: var(--white);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        min-width: 150px;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .service-icon {
+        height: 40px;
+        width: auto;
       }
 
       /* Stats Section */
@@ -467,10 +612,17 @@
       }
 
       /* Gallery Section */
+      .gallery-section {
+        padding: 80px 0;
+        background-color: var(--white);
+      }
+
       .gallery-img {
         border-radius: var(--border-radius);
         border: 3px solid var(--light);
         box-shadow: var(--shadow);
+        height: 300px;
+        object-fit: cover;
       }
 
       /* Footer */
@@ -483,38 +635,73 @@
       .footer-title {
         color: var(--white);
         font-weight: 700;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
       }
 
       .footer-title:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
         width: 50px;
         height: 3px;
         background: var(--primary-light);
       }
 
+      .footer-logo {
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border: 3px solid var(--primary-light);
+        padding: 3px;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+
       .quick-links a {
         color: rgba(255, 255, 255, 0.7);
+        display: block;
+        padding: 5px 0;
+        border-left: 3px solid transparent;
+        padding-left: 10px;
+        transition: var(--transition);
       }
 
       .quick-links a:hover {
         color: var(--primary-light);
         border-left-color: var(--primary-light);
+        padding-left: 15px;
       }
 
       .contact-info i {
         color: var(--primary-light);
+        width: 20px;
       }
 
       .social-links a {
         background: rgba(255, 255, 255, 0.1);
+        color: var(--white);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
       }
 
       .social-links a:hover {
         background: var(--primary-light);
         color: var(--dark);
+        transform: translateY(-3px);
       }
 
       .copyright {
         background: rgba(0, 0, 0, 0.15);
+        margin-top: 40px;
       }
 
       .visitor-count {
@@ -524,11 +711,30 @@
         box-shadow: 0 4px 10px rgba(255, 123, 0, 0.5);
         padding: 5px 15px;
         border-radius: 20px;
+        display: inline-block;
       }
 
       .developer-link {
         color: var(--primary-light) !important;
         font-weight: 600;
+      }
+
+      /* Badge Styles */
+      .badge {
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.8rem;
+      }
+
+      .header-badge {
+        background: var(--primary-light);
+        color: var(--white);
+      }
+
+      .header-badge.secondary {
+        background: var(--secondary);
+        color: var(--white);
       }
 
       /* Responsive Styles */
@@ -580,21 +786,105 @@
         .stat-number {
           font-size: 2rem;
         }
+
+        .officials-grid {
+          grid-template-columns: 1fr;
+        }
+
+        /* Popup Styles - Fixed Version */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Higher than navbar */
+    padding: 20px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    position: relative;
+    overflow: hidden;
+    animation: slideDown 0.4s ease-out;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    background: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+.popup-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { 
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Ensure navbar has lower z-index */
+.nav-bar {
+    z-index: 1000; /* Lower than popup */
+}
       }
     </style>
   </head>
 
   <body>
     <!-- Top Bar -->
-   <!-- Your existing HTML content -->
-    <!-- Top Bar -->
     <div class="top-bar">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6 top-bar-left">
             महाराष्ट्र शासन | GOVERNMENT OF MAHARASHTRA
-                <br>          <i class="fas fa-envelope"></i>
-              gptelwade1947@gmail.com
+            <br>
+            <i class="fas fa-envelope"></i>
+            gptelwade1947@gmail.com
           </div>
           <div
             class="col-md-6 d-flex justify-content-end align-items-center gap-3 flex-wrap top-bar-right"
@@ -618,7 +908,8 @@
               class="logo"
             />
             <div class="village-info">
-              <h2 class="village-name"> वावडुंगी/ VAVDUNGI </h2>
+              <h2 class="village-name"> वावडुंगी/ VAVDUNGI</h2>
+              <p class="village-subtitle">ग्रामपंचायत, मुरुड, रायगड</p>
             </div>
           </div>
           <div class="header-badges d-flex gap-2">
@@ -647,7 +938,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link" href="./index.html">
+              <a class="nav-link active" href="./index.html">
                 <i class="fas fa-home me-1"></i> मुखपृष्ठ
               </a>
             </li>
@@ -776,6 +1067,7 @@
         </div>
       </div>
     </nav>
+
     <!-- Marquee -->
     <div class="marquee">
       <div class="container">
@@ -788,7 +1080,106 @@
           पाणीपट्टी व घरपट्टी वेळेवर भरून सहकार्य करावे.
         </marquee>
       </div>
-    </div
+    </div>
+
+    <!-- Search Section -->
+    <div class="container">
+      <!-- Search and Weather Container -->
+      <div class="search-weather-container">
+        <!-- Weather Section - Left Side -->
+        <div class="weather-section mt-5">
+          <div class="weather-data">
+            <div class="weather-header">
+              <i class="fas fa-map-marker-alt"></i>
+              <span class="weather-location">तेलवडे, रायगड</span>
+              <button class="weather-refresh-btn" title="Refresh weather">
+                <i class="fas fa-sync-alt"></i>
+              </button>
+            </div>
+            <div class="weather-main">
+              <div class="weather-icon-temp">
+                <i class="fas fa-cloud-sun"></i>
+                <div class="temperature">
+                  <span class="temp-value">28°C</span>
+                  <span class="temp-feels">जाणवते: 30°C</span>
+                </div>
+              </div>
+              <div class="weather-details">
+                <span class="weather-desc">सौम्य ढगाळ</span>
+                <div class="weather-stats">
+                  <div class="weather-stat">
+                    <i class="fas fa-tint"></i>
+                    <span>65%</span>
+                  </div>
+                  <div class="weather-stat">
+                    <i class="fas fa-wind"></i>
+                    <span>3.5 m/s</span>
+                  </div>
+                  <div class="weather-stat">
+                    <i class="fas fa-gauge-high"></i>
+                    <span>1013 hPa</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="weather-sun-times">
+              <div class="sun-time">
+                <i class="fas fa-sun"></i>
+                <span>सूर्योदय: 06:15</span>
+              </div>
+              <div class="sun-time">
+                <i class="fas fa-moon"></i>
+                <span>सूर्यास्त: 18:45</span>
+              </div>
+            </div>
+            <div class="weather-timestamp">
+              <small>अद्ययावत: २८/१२/२०२३, १०:३० AM</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Section - Right Side -->
+        <div class="search-section">
+          <div class="search-box">
+            <div class="search-input-group">
+              <i class="fas fa-search search-icon"></i>
+              <input
+                type="text"
+                class="search-input"
+                placeholder="इथे शोधा..."
+                value=""
+              />
+              <button
+                type="button"
+                class="clear-search"
+                aria-label="Clear search"
+                style="display: none"
+              >
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Search Results Dropdown - Positioned below search box -->
+          <div class="search-results-dropdown" style="display: none">
+            <div class="search-results-header">
+              <span>शोध निकाल: ""</span>
+              <button class="close-results" aria-label="Close results">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+
+            <div class="search-results-body">
+              <div class="no-results">
+                <i class="fas fa-search no-results-icon"></i>
+                <p>'' साठी कोणतेही निकाल सापडले नाहीत</p>
+                <small>कृपया वेगळे कीवर्ड वापरून पहा</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
  
     <!-- === MAIN CONTENT START === -->
 
@@ -845,7 +1236,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section py-5 py-md-5">
+    <section id="about" class="about-section">
       <div class="container">
         <div class="row align-items-center g-5">
           <div class="col-lg-6" data-aos="fade-right">
@@ -908,11 +1299,9 @@
                   class="officer-img rounded-circle"
                 />
               </div>
-              <h4 class="officer-name" style="color: var(--dark)">
-                सौ. ऋतुजा दिपेश वरणकर
-              </h4>
+              <h4 class="officer-name">सौ. ऋतुजा दिपेश वरणकर</h4>
               <p class="officer-role">सरपंचाचे नाव</p>
-               <p class="tab-content">९५४५१६५२६९</p>
+              <p class="tab-content">९५४५१६५२६९</p>
               <p
                 class="text-light-emphasis small"
                 style="color: var(--text-light) !important"
@@ -931,9 +1320,7 @@
                   class="officer-img rounded-circle"
                 />
               </div>
-              <h4 class="officer-name" style="color: var(--dark)">
-                सौ. सुवर्णा सुरेश भुवड 
-              </h4>
+              <h4 class="officer-name">सौ. सुवर्णा सुरेश भुवड</h4>
               <p class="officer-role">उपसरपंचाचे नाव</p>
               <p class="tab-content">९३५९६४२४४५</p>
               <p
@@ -954,9 +1341,7 @@
                   class="officer-img rounded-circle"
                 />
               </div>
-              <h4 class="officer-name" style="color: var(--dark)">
-                  श्री दत्तात्रेय बाळकृष्ण नाईक 
-              </h4>
+              <h4 class="officer-name">श्री दत्तात्रेय बाळकृष्ण नाईक</h4>
               <p class="officer-role">ग्रामसेवकाचे नाव</p>
               <p
                 class="text-light-emphasis small"
@@ -970,244 +1355,240 @@
         </div>
       </div>
     </section>
-<!--Govt Section-->
-        <div class="government-officials-container">
-          <section class="officials-section">
-            <h2 class="section-main-title" data-aos="fade-up">शासन अधिकारी</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
-              महाराष्ट्र शासन आणि ग्रामीण विकास विभाग
-            </p>
 
-            <div class="officials-grid">
-              <!-- State Official 1 -->
-              <div class="official-card" data-aos="zoom-in" data-aos-delay="0">
-                <div class="official-image-container">
-                  <img
-                    src="./Img/officer1.png"
-                    alt="श्री. देवेंद्र फडणवीस"
-                    class="official-image"
-                  />
-                </div>
-                <div class="official-content">
-                  <h3 class="official-name">श्री. देवेंद्र फडणवीस</h3>
-                  <p class="official-position-marathi">माननीय मुख्यमंत्री</p>
-                  <p class="official-position-english">
-                    Hon'ble Chief Minister
-                  </p>
-                  <p class="official-department">महाराष्ट्र शासन</p>
-                  <div class="official-divider"></div>
-                </div>
-              </div>
+    <!--Govt Section-->
+    <div class="government-officials-container">
+      <section class="officials-section">
+        <h2 class="section-main-title" data-aos="fade-up">शासन अधिकारी</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+          महाराष्ट्र शासन आणि ग्रामीण विकास विभाग
+        </p>
 
-              <!-- State Official 2 -->
-              <div
-                class="official-card"
-                data-aos="zoom-in"
-                data-aos-delay="100"
-              >
-                <div class="official-image-container">
-                  <img
-                    src="./Img/officer2.jpeg"
-                    alt="श्री. एकनाथ शिंदे"
-                    class="official-image"
-                  />
-                </div>
-                <div class="official-content">
-                  <h3 class="official-name">श्री. एकनाथ शिंदे</h3>
-                  <p class="official-position-marathi">माननीय उपमुख्यमंत्री</p>
-                  <p class="official-position-english">
-                    Hon'ble Deputy Chief Minister
-                  </p>
-                  <p class="official-department">महाराष्ट्र शासन</p>
-                  <div class="official-divider"></div>
-                </div>
-              </div>
-
-              <!-- State Official 3 -->
-              <div
-                class="official-card"
-                data-aos="zoom-in"
-                data-aos-delay="200"
-              >
-                <div class="official-image-container">
-                  <img
-                    src="./Img/officer3.jpeg"
-                    alt="श्री. अजित पवार"
-                    class="official-image"
-                  />
-                </div>
-                <div class="official-content">
-                  <h3 class="official-name">श्री. अजित पवार</h3>
-                  <p class="official-position-marathi">माननीय उपमुख्यमंत्री</p>
-                  <p class="official-position-english">
-                    Hon'ble Deputy Chief Minister
-                  </p>
-                  <p class="official-department">महाराष्ट्र शासन</p>
-                  <div class="official-divider"></div>
-                </div>
-              </div>
-
-              <!-- State Official 4 -->
-              <div
-                class="official-card"
-                data-aos="zoom-in"
-                data-aos-delay="300"
-              >
-                <div class="official-image-container">
-                  <img
-                    src="./Img/officer4.png"
-                    alt="श्री. जयकुमार गोरे"
-                    class="official-image"
-                  />
-                </div>
-                <div class="official-content">
-                  <h3 class="official-name">श्री. जयकुमार गोरे</h3>
-                  <p class="official-position-marathi">माननीय मंत्री</p>
-                  <p class="official-position-english">Hon'ble Minister</p>
-                  <p class="official-department">
-                    ग्रामीण विकास व पंचायतराज विभाग
-                  </p>
-                  <div class="official-divider"></div>
-                </div>
-              </div>
-
-              <!-- State Official 5 -->
-              <div
-                class="official-card"
-                data-aos="zoom-in"
-                data-aos-delay="400"
-              >
-                <div class="official-image-container">
-                  <img
-                    src="./Img/officer5.png"
-                    alt="श्री. योगेश कदम"
-                    class="official-image"
-                  />
-                </div>
-                <div class="official-content">
-                  <h3 class="official-name">श्री. योगेश कदम</h3>
-                  <p class="official-position-marathi">माननीय राज्यमंत्री</p>
-                  <p class="official-position-english">
-                    Hon'ble Minister of State
-                  </p>
-                  <p class="official-department">
-                    ग्रामीण विकास व पंचायतराज विभाग
-                  </p>
-                  <div class="official-divider"></div>
-                </div>
-              </div>
-
-              <!-- State Official 6 -->
-              <div
-                class="official-card"
-                data-aos="zoom-in"
-                data-aos-delay="500"
-              >
-                <div class="official-image-container">
-                  <img
-                    src="./Img/officer6.png"
-                    alt="श्री. एकनाथ दवले"
-                    class="official-image"
-                  />
-                </div>
-                <div class="official-content">
-                  <h3 class="official-name">श्री. एकनाथ दवले</h3>
-                  <p class="official-position-marathi">प्रमुख सचिव</p>
-                  <p class="official-position-english">Principal Secretary</p>
-                  <p class="official-department">
-                    ग्रामीण विकास व पंचायतराज विभाग
-                  </p>
-                  <div class="official-divider"></div>
-                </div>
-              </div>
+        <div class="officials-grid">
+          <!-- State Official 1 -->
+          <div class="official-card" data-aos="zoom-in" data-aos-delay="0">
+            <div class="official-image-container">
+              <img
+                src="./Img/officer1.png"
+                alt="श्री. देवेंद्र फडणवीस"
+                class="official-image"
+              />
             </div>
-          </section>
-
-          <section class="officials-section district-section">
-            <div class="officials-grid">
-              </div>
+            <div class="official-content">
+              <h3 class="official-name">श्री. देवेंद्र फडणवीस</h3>
+              <p class="official-position-marathi">माननीय मुख्यमंत्री</p>
+              <p class="official-position-english">
+                Hon'ble Chief Minister
+              </p>
+              <p class="official-department">महाराष्ट्र शासन</p>
+              <div class="official-divider"></div>
             </div>
-          </section>
-        </div>
-        <!--E alert-->
-        <div
-          id="ealert"
-          class="container-fluid d-flex align-items-center justify-content-center py-4"
-          style="background-color: #ade8f4ff"
-        >
-          <div class="row w-100 justify-content-center align-items-center">
-            <!-- E-Davandi -->
-            <div class="col-auto text-center mb-3">
-              <div class="service-card p-4">
-                <i class="fas fa-bullhorn fa-2x text-dark mb-2"></i>
-                <a
-                  href="./gralert.html"
-                  class="text-decoration-none"
-                  target="_self"
-                >
-                  <div class="fw-bold text-dark">ई - दवंडी</div>
-                </a>
-              </div>
-            </div>
+          </div>
 
-            <!-- E-Pramanpatra -->
-            <div class="col-auto text-center mb-3">
-              <div class="service-card p-4">
-                <i class="fas fa-certificate fa-2x text-success mb-2"></i>
-                <a href="#" class="text-decoration-none" target="_self">
-                  <div class="fw-bold text-dark">ई - प्रमाणपत्र</div>
-                </a>
-              </div>
+          <!-- State Official 2 -->
+          <div
+            class="official-card"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="official-image-container">
+              <img
+                src="./Img/officer2.jpeg"
+                alt="श्री. एकनाथ शिंदे"
+                class="official-image"
+              />
             </div>
-
-            <!-- Grampanchayat Kar -->
-            <div class="col-auto text-center mb-3">
-              <div class="service-card p-4">
-                <i class="fas fa-receipt fa-2x text-warning mb-2"></i>
-                <a
-                  href="./taxcollect.html"
-                  class="text-decoration-none"
-                  target="_self"
-                >
-                  <div class="fw-bold text-dark">ग्रामपंचायत कर</div>
-                </a>
-              </div>
+            <div class="official-content">
+              <h3 class="official-name">श्री. एकनाथ शिंदे</h3>
+              <p class="official-position-marathi">माननीय उपमुख्यमंत्री</p>
+              <p class="official-position-english">
+                Hon'ble Deputy Chief Minister
+              </p>
+              <p class="official-department">महाराष्ट्र शासन</p>
+              <div class="official-divider"></div>
             </div>
+          </div>
 
-            <!-- Grampanchayat Ahaval -->
-            <div class="col-auto text-center mb-3">
-              <div class="service-card p-4">
-                <i class="fas fa-chart-bar fa-2x text-info mb-2"></i>
-                <a
-                  href="./services.html"
-                  class="text-decoration-none"
-                  target="_self"
-                >
-                  <div class="fw-bold text-dark">ग्रामपंचायत अहवाल</div>
-                </a>
-              </div>
+          <!-- State Official 3 -->
+          <div
+            class="official-card"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <div class="official-image-container">
+              <img
+                src="./Img/officer3.jpeg"
+                alt="श्री. अजित पवार"
+                class="official-image"
+              />
             </div>
+            <div class="official-content">
+              <h3 class="official-name">श्री. अजित पवार</h3>
+              <p class="official-position-marathi">माननीय उपमुख्यमंत्री</p>
+              <p class="official-position-english">
+                Hon'ble Deputy Chief Minister
+              </p>
+              <p class="official-department">महाराष्ट्र शासन</p>
+              <div class="official-divider"></div>
+            </div>
+          </div>
 
-            <!-- Maharashtra Police -->
-            <div class="col-auto text-center mb-3">
-              <div class="service-card p-4">
-                <img
-                  src="./Img/Logo_mp.png"
-                  alt="Maharashtra Police"
-                  class="service-icon mb-2"
-                  style="height: 40px; width: auto;"
-                />
-                <a
-                  href="https://citizen.mahapolice.gov.in/citizen/mh/index.aspx"
-                  class="text-decoration-none"
-                  target="_blank"
-                >
-                  <div class="fw-bold text-dark">महाराष्ट्र पोलीस</div>
-                </a>
-              </div>
+          <!-- State Official 4 -->
+          <div
+            class="official-card"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div class="official-image-container">
+              <img
+                src="./Img/officer4.png"
+                alt="श्री. जयकुमार गोरे"
+                class="official-image"
+              />
+            </div>
+            <div class="official-content">
+              <h3 class="official-name">श्री. जयकुमार गोरे</h3>
+              <p class="official-position-marathi">माननीय मंत्री</p>
+              <p class="official-position-english">Hon'ble Minister</p>
+              <p class="official-department">
+                ग्रामीण विकास व पंचायतराज विभाग
+              </p>
+              <div class="official-divider"></div>
+            </div>
+          </div>
+
+          <!-- State Official 5 -->
+          <div
+            class="official-card"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div class="official-image-container">
+              <img
+                src="./Img/officer5.png"
+                alt="श्री. योगेश कदम"
+                class="official-image"
+              />
+            </div>
+            <div class="official-content">
+              <h3 class="official-name">श्री. योगेश कदम</h3>
+              <p class="official-position-marathi">माननीय राज्यमंत्री</p>
+              <p class="official-position-english">
+                Hon'ble Minister of State
+              </p>
+              <p class="official-department">
+                ग्रामीण विकास व पंचायतराज विभाग
+              </p>
+              <div class="official-divider"></div>
+            </div>
+          </div>
+
+          <!-- State Official 6 -->
+          <div
+            class="official-card"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+          >
+            <div class="official-image-container">
+              <img
+                src="./Img/officer6.png"
+                alt="श्री. एकनाथ दवले"
+                class="official-image"
+              />
+            </div>
+            <div class="official-content">
+              <h3 class="official-name">श्री. एकनाथ दवले</h3>
+              <p class="official-position-marathi">प्रमुख सचिव</p>
+              <p class="official-position-english">Principal Secretary</p>
+              <p class="official-department">
+                ग्रामीण विकास व पंचायतराज विभाग
+              </p>
+              <div class="official-divider"></div>
             </div>
           </div>
         </div>
+      </section>
+    </div>
+
+    <!--E alert-->
+    <div
+      id="ealert"
+      class="container-fluid d-flex align-items-center justify-content-center py-4"
+      style="background-color: #ade8f4ff"
+    >
+      <div class="row w-100 justify-content-center align-items-center">
+        <!-- E-Davandi -->
+        <div class="col-auto text-center mb-3">
+          <div class="service-card p-4">
+            <i class="fas fa-bullhorn fa-2x text-dark mb-2"></i>
+            <a
+              href="./gralert.html"
+              class="text-decoration-none"
+              target="_self"
+            >
+              <div class="fw-bold text-dark">ई - दवंडी</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- E-Pramanpatra -->
+        <div class="col-auto text-center mb-3">
+          <div class="service-card p-4">
+            <i class="fas fa-certificate fa-2x text-success mb-2"></i>
+            <a href="#" class="text-decoration-none" target="_self">
+              <div class="fw-bold text-dark">ई - प्रमाणपत्र</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Grampanchayat Kar -->
+        <div class="col-auto text-center mb-3">
+          <div class="service-card p-4">
+            <i class="fas fa-receipt fa-2x text-warning mb-2"></i>
+            <a
+              href="./taxcollect.html"
+              class="text-decoration-none"
+              target="_self"
+            >
+              <div class="fw-bold text-dark">ग्रामपंचायत कर</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Grampanchayat Ahaval -->
+        <div class="col-auto text-center mb-3">
+          <div class="service-card p-4">
+            <i class="fas fa-chart-bar fa-2x text-info mb-2"></i>
+            <a
+              href="./services.html"
+              class="text-decoration-none"
+              target="_self"
+            >
+              <div class="fw-bold text-dark">ग्रामपंचायत अहवाल</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Maharashtra Police -->
+        <div class="col-auto text-center mb-3">
+          <div class="service-card p-4">
+            <img
+              src="./Img/Logo_mp.png"
+              alt="Maharashtra Police"
+              class="service-icon mb-2"
+              style="height: 40px; width: auto;"
+            />
+            <a
+              href="https://citizen.mahapolice.gov.in/citizen/mh/index.aspx"
+              class="text-decoration-none"
+              target="_blank"
+            >
+              <div class="fw-bold text-dark">महाराष्ट्र पोलीस</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Village Stats Section -->
     <section class="stats-section" id="stats-section">
@@ -1246,7 +1627,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="gallery-section py-5 py-md-5" id="gallery">
+    <section class="gallery-section" id="gallery">
       <div class="container">
         <h2 class="section-title" data-aos="fade-up">आमची गॅलरी</h2>
         <div class="row g-4">
@@ -1322,6 +1703,296 @@
 
     <!-- === MAIN CONTENT END === -->
 
+<!-- Add this section after the Helpline Section and before the Footer -->
+<section class="icon-carousel-section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">सरकारी योजना आणि सेवा</h2>
+        <p class="text-center mb-4" data-aos="fade-up" data-aos-delay="100">
+            महत्वाच्या सरकारी योजना आणि सेवांचे दुवे
+        </p>
+        
+        <div class="icon-carousel-container">
+            <div class="icon-carousel-track">
+                <!-- Icons will be dynamically added here -->
+            </div>
+        </div>
+        
+        <div class="carousel-controls">
+    
+<p class="carousel-control prev"></p>
+    <div class="carousel-control next"></div>
+</div>
+    </div>
+</section>
+
+<style>
+    /* Icon Carousel Styles */
+    .icon-carousel-section {
+        padding: 60px 0;
+        background-color: var(--light);
+        overflow: hidden;
+    }
+    
+    .icon-carousel-container {
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    .icon-carousel-track {
+        display: flex;
+        transition: transform 0.8s ease;
+        gap: 20px;
+        padding: 10px 0;
+        will-change: transform;
+    }
+    
+    .icon-carousel-item {
+        flex: 0 0 auto;
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+    
+    .icon-carousel-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .icon-image {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: var(--white);
+        padding: 10px;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+    }
+    
+    .icon-carousel-item:hover .icon-image {
+        transform: scale(1.05);
+        box-shadow: var(--shadow-hover);
+    }
+    
+    .icon-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--primary);
+        margin: 0;
+        line-height: 1.3;
+    }
+    
+    .carousel-controls {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    
+    
+    .carousel-control:hover {
+        background: var(--primary-dark);
+        transform: scale(1.1);
+    }
+    
+    .carousel-control:active {
+        transform: scale(0.95);
+    }
+    
+    /* Infinite scroll animation */
+    @keyframes infiniteScroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-150px * 6 - 20px * 6)); /* Move by half the content width */
+        }
+    }
+    
+    .icon-carousel-track.auto-scroll {
+        animation: infiniteScroll 30s linear infinite;
+    }
+    
+    .icon-carousel-track.auto-scroll:hover {
+        animation-play-state: paused;
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .icon-carousel-item {
+            width: 120px;
+        }
+        
+        .icon-image {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .icon-title {
+            font-size: 0.8rem;
+        }
+        
+        @keyframes infiniteScroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-120px * 6 - 20px * 6));
+            }
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .icon-carousel-item {
+            width: 100px;
+        }
+        
+        .icon-image {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .icon-title {
+            font-size: 0.75rem;
+        }
+        
+        @keyframes infiniteScroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-100px * 6 - 20px * 6));
+            }
+        }
+    }
+</style>
+
+<script>
+    // Icon Carousel Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const iconTrack = document.querySelector('.icon-carousel-track');
+        const prevBtn = document.querySelector('.carousel-control.prev');
+        const nextBtn = document.querySelector('.carousel-control.next');
+        
+        // Icon data - replace with your actual icons and links
+        const icons = [
+            { src: './Img/sc1.png', title: 'मही वसुंधरा', link: 'https://majhivasundhara.in/en' },
+            { src: './Img/sc2.png', title: 'सरकारी निर्णय', link: 'https://maharashtra.gov.in/Site/1603/Government-Decisions' },
+            { src: './Img/sc3.png', title: 'अटल जल योजना', link: 'https://ataljal.mowr.gov.in/' },
+            { src: './Img/sc4.png', title: 'सशक्त पंचायत', link: 'https://logosofindia.blogspot.com/2025/01/sashakt-panchayat-satat-vikas.html' },
+            { src: './Img/sc5.png', title: 'पंचायतराज सेवार्थ', link: 'https://www.panchayatrajsevarth.maharashtra.gov.in/' },
+            { src: './Img/sc6.png', title: 'जलयुक्त शिवार', link: 'http://mrsac.maharashtra.gov.in/jalyukt/' },
+            { src: './Img/sc7.png', title: 'भारत सरकार', link: 'https://www.india.gov.in/' },
+            { src: './Img/sc8.png', title: 'राष्ट्रीय पोर्टल', link: 'https://www.india.gov.in/' },
+            { src: './Img/sc9.png', title: 'डिजिटल इंडिया', link: 'https://www.digitalindia.gov.in/' },
+            { src: './Img/sc10.png', title: 'जी२०', link: 'https://www.g20.in/en/' },
+            { src: './Img/sc11.png', title: 'ग्रामीण विकास', link: 'https://rdd.maharashtra.gov.in/' },
+            { src: './Img/sc12.png', title: 'महापूड', link: 'https://www.mahapwd.com/' }
+        ];
+        
+        // Create icon elements with infinite loop
+        function createIconElements() {
+            // Clear existing content
+            iconTrack.innerHTML = '';
+            
+            // Add multiple copies for seamless infinite scroll
+            for (let i = 0; i < 3; i++) { // Create 3 copies for smooth looping
+                icons.forEach(icon => {
+                    const iconItem = document.createElement('a');
+                    iconItem.href = icon.link;
+                    iconItem.target = '_blank';
+                    iconItem.rel = 'noopener noreferrer';
+                    iconItem.className = 'icon-carousel-item';
+                    
+                    iconItem.innerHTML = `
+                        <img src="${icon.src}" alt="${icon.title}" class="icon-image">
+                        <p class="icon-title">${icon.title}</p>
+                    `;
+                    
+                    iconTrack.appendChild(iconItem);
+                });
+            }
+        }
+        
+        // Initialize carousel with automatic infinite scroll
+        function initializeAutoScroll() {
+            // Add auto-scroll class for CSS animation
+            iconTrack.classList.add('auto-scroll');
+        }
+        
+        // Manual navigation functions
+        function nextSlide() {
+            // For manual navigation, temporarily disable auto-scroll
+            iconTrack.classList.remove('auto-scroll');
+            
+            const itemWidth = 150 + 20; // width + gap
+            const currentTransform = getComputedStyle(iconTrack).transform;
+            const matrix = new DOMMatrix(currentTransform);
+            const currentX = matrix.m41;
+            
+            iconTrack.style.transform = `translateX(${currentX - itemWidth}px)`;
+            
+            // Restart auto-scroll after a delay
+            setTimeout(() => {
+                iconTrack.classList.add('auto-scroll');
+            }, 3000);
+        }
+        
+        function prevSlide() {
+            // For manual navigation, temporarily disable auto-scroll
+            iconTrack.classList.remove('auto-scroll');
+            
+            const itemWidth = 150 + 20; // width + gap
+            const currentTransform = getComputedStyle(iconTrack).transform;
+            const matrix = new DOMMatrix(currentTransform);
+            const currentX = matrix.m41;
+            
+            iconTrack.style.transform = `translateX(${currentX + itemWidth}px)`;
+            
+            // Restart auto-scroll after a delay
+            setTimeout(() => {
+                iconTrack.classList.add('auto-scroll');
+            }, 3000);
+        }
+        
+        // Event listeners for manual controls
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        // Initialize
+        createIconElements();
+        initializeAutoScroll();
+        
+        // Handle responsive adjustments
+        function handleResize() {
+            // Reinitialize on resize to adjust animation
+            iconTrack.classList.remove('auto-scroll');
+            setTimeout(() => {
+                iconTrack.classList.add('auto-scroll');
+            }, 100);
+        }
+        
+        window.addEventListener('resize', handleResize);
+        
+        // Reset animation on visibility change (when tab becomes active again)
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                iconTrack.classList.remove('auto-scroll');
+                setTimeout(() => {
+                    iconTrack.classList.add('auto-scroll');
+                }, 100);
+            }
+        });
+    });
+</script>
+
+
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
@@ -1338,8 +2009,7 @@
                 ग्रामपंचायतीचे नाव :  वावडुंगी/ VAVDUNGI <br />
                 Email ID:
                 <a
-                  href="mailto:gpwawdungi1947@gmail.com
-"
+                  href="mailto:gpwawdungi1947@gmail.com"
                   style="color: var(--accent)"
                   >gpwawdungi1947@gmail.com
                 </a>
@@ -1457,7 +2127,7 @@
           </p>
           <p class="mb-0 small">
             Design & Developed By
-            <a href="#" class="developer-link">KUMIRADI INFOTECH </a>
+            <a href="#" class="developer-link">KUMIRADI INFOTECH</a>
             [7507962607]
           </p>
         </div>
@@ -1469,7 +2139,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        
       // Initialize AOS
       AOS.init({
         duration: 1000,
@@ -1543,47 +2212,70 @@
         }
       }
     </script>
-     </script>
-    <div id="popupOverlay" class="popup-overlay" style="display: none">
-      <div class="popup-content">
+
+<!-- Popup Structure -->
+<div id="popupOverlay" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
         <button class="close-btn" id="closePopup">&times;</button>
-        <img src="./Img/popup.jpeg" alt="Popup" class="popup-image" />
-      </div>
+        <img src="./Img/popup.jpeg" alt="Important Announcement" class="popup-image">
     </div>
+</div>
 
     <script>
-      // Add this script to each HTML page
-      document.addEventListener("DOMContentLoaded", function () {
-        const popupOverlay = document.getElementById("popupOverlay");
-        const closePopup = document.getElementById("closePopup");
+      // Fixed Popup Script - Force popup to stay on top
+document.addEventListener("DOMContentLoaded", function () {
+    const popupOverlay = document.getElementById("popupOverlay");
+    const closePopup = document.getElementById("closePopup");
 
-        // Check if page was reloaded or it's first visit
-        const isReloaded = performance.navigation.type === 1;
-        const hasSeenPopup = sessionStorage.getItem("hasSeenPopup");
+    // Force highest z-index
+    popupOverlay.style.zIndex = "10000";
+    
+    // Show popup immediately
+    setTimeout(() => {
+        popupOverlay.style.display = "flex";
+        document.body.style.overflow = "hidden";
+        
+        // Double check z-index after display
+        popupOverlay.style.zIndex = "10000";
+    }, 10); // Reduced delay
 
-        // Show popup on first visit OR page reload
-        if (!hasSeenPopup || isReloaded) {
-          popupOverlay.style.display = "flex";
-          sessionStorage.setItem("hasSeenPopup", "true");
+    // Close functionality
+    function closePopupFunc() {
+        popupOverlay.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+
+    closePopup.addEventListener("click", closePopupFunc);
+
+    popupOverlay.addEventListener("click", function (e) {
+        if (e.target === popupOverlay) {
+            closePopupFunc();
         }
+    });
 
-        closePopup.addEventListener("click", function () {
-          popupOverlay.style.display = "none";
-        });
-
-        popupOverlay.addEventListener("click", function (e) {
-          if (e.target === popupOverlay) {
-            popupOverlay.style.display = "none";
-          }
-        });
-
-        // Close with Escape key
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape" && popupOverlay.style.display === "flex") {
-            popupOverlay.style.display = "none";
-          }
-        });
-      });
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && popupOverlay.style.display === "flex") {
+            closePopupFunc();
+        }
+    });
+      // DOM elements // Weather API configuration
+      const searchInput = document.querySelector(".search-input");
+      const clearSearchBtn = document.querySelector(".clear-search");
+      const searchResults = document.querySelector(".search-results-dropdown");
+      const resultsHeader = searchResults.querySelector(
+        ".search-results-header span"
+      );
+      const resultsBody = searchResults.querySelector(".search-results-body");
+      const weatherRefreshBtn = document.querySelector(".weather-refresh-btn");
+      const weatherLocation = document.querySelector(".weather-location");
+      const tempValue = document.querySelector(".temp-value");
+      const tempFeels = document.querySelector(".temp-feels");
+      const weatherDesc = document.querySelector(".weather-desc");
+      const weatherIcon = document.querySelector(".weather-icon-temp i");
+      const humidityStat = document.querySelector(
+        ".weather-stat:nth-child(1) span"
+      );
+});
     </script>
   </body>
 </html>
