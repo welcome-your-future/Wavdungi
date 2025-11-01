@@ -235,29 +235,28 @@
             text-transform: uppercase;
         }
 
-        /* Navigation Bar */
-        .nav-bar {
-            background-color: var(--white);
-            padding: 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
+/* Navigation Bar */
+      .nav-bar {
+        background-color: var(--secondary-dark);
+        padding: 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
 
-        .navbar-nav .nav-link {
-            color: white !important;
-            font-weight: 500;
-            padding: 16px 20px !important;
-            border-bottom: 3px solid transparent;
-        }
+      .navbar-nav .nav-link {
+        color: white !important;
+        font-weight: 500;
+        padding: 16px 20px !important;
+        border-bottom: 3px solid transparent;
+      }
 
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link.active {
-            color: var(--primary) !important;
-            border-color: var(--primary);
-        }
-
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link.active {
+        color: var(--primary-light) !important;
+        border-color: var(--primary-light);
+      }
         .marquee {
             background-color: var(--accent);
             color: var(--primary-dark);
@@ -559,6 +558,7 @@
     </div>
 
     <!-- Navigation Bar -->
+     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark nav-bar">
       <div class="container">
         <button
@@ -574,157 +574,131 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav nav-main-container">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="./">
-                <i class="fas fa-home"></i> मुखपृष्ठ
+              <a class="nav-link active" href="./index.html">
+                <i class="fas fa-home me-1"></i> मुखपृष्ठ
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="./members.html">
-                <i class="fas fa-users"></i> पदाधिकारी
+              <a class="nav-link" href="./members.html">
+                <i class="fas fa-users me-1"></i> पदाधिकारी
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="./villageinfo.html">
-                <i class="fas fa-info-circle"></i> गावाची माहिती
+              <a class="nav-link" href="./villageinfo.html">
+                <i class="fas fa-info-circle me-1"></i> गावाची माहिती
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./impnumbers.html">
-                <i class="fas fa-phone-alt"></i> महत्वाचे नंबर
+                <i class="fas fa-phone-alt me-1"></i> महत्वाचे नंबर
               </a>
             </li>
-            <!-- शासकीय योजना Dropdown -->
-            <li class="nav-item dropdown d-flex align-items-center">
+            <li class="nav-item dropdown">
               <a
-                class="nav-link text-white fw-semibold hover-link text-white"
-                href="./fifteen.html"
-              >
-                <i class="fa-solid fa-landmark text-white"></i>
-                शासकीय योजना
-              </a>
-              <a
-                class="nav-link dropdown-toggle text-primary fw-semibold"
-                href="./fifteen.html"
-                id="navbarDropdown"
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="schemesDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-              ></a>
-              <ul class="dropdown-menu dropdown-menu-custom">
+              >
+                <i class="fas fa-landmark me-1"></i> शासकीय योजना
+                <i
+                  class="fas fa-chevron-down ms-1"
+                  style="font-size: 0.8rem"
+                ></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="schemesDropdown">
                 <li>
-                  <a
-                    class="dropdown-item dropdown-item-custom"
-                    href="./fifteen.html"
+                  <a class="dropdown-item" href="./fifteen.html"
                     >१५ वित्त आयोग</a
                   >
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item dropdown-item-custom"
-                    href="./jaljeevan.html"
+                  <a class="dropdown-item" href="./jaljeevan.html"
                     >जल जीवन मिशन</a
                   >
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item dropdown-item-custom"
-                    href="./pmyojna.html"
+                  <a class="dropdown-item" href="./pmyojna.html"
                     >प्रधान मंत्री आवास योजना</a
                   >
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item dropdown-item-custom"
-                    href="./mgandhi.html"
+                  <a class="dropdown-item" href="./mgandhi.html"
                     >महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार हमी योजना</a
                   >
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item dropdown-item-custom"
-                    href="./tandavasti.html"
+                  <a class="dropdown-item" href="./tandavasti.html"
                     >तांडा/वस्ती योजना</a
                   >
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item dropdown-item-custom"
-                    href="./scneo.html"
+                  <a class="dropdown-item" href="./scneo.html"
                     >अनुसूचीत जाती व नवबौध्द विकास</a
                   >
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item dropdown-item-custom"
-                    href="./ramaiyojna.html"
+                  <a class="dropdown-item" href="./ramaiyojna.html"
                     >रमाई आवास योजना</a
                   >
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item dropdown-item-custom"
-                    href="./shabriyojna.html"
+                  <a class="dropdown-item" href="./shabriyojna.html"
                     >शबरी आदिवासी घरकुल योजना</a
                   >
                 </li>
               </ul>
             </li>
-            <!-- लाभार्थी रजिस्टर Dropdown -->
-            <li class="nav-item dropdown d-flex align-items-center">
+            <li class="nav-item dropdown">
               <a
-                class="nav-link text-white fw-semibold text-white px-2 hover-link"
-                href="./pmlabh.html"
-              >
-                <i class="fa-solid fa-users-line text-white"></i>
-                लाभार्थी रजिस्टर
-              </a>
-              <a
-                class="nav-link dropdown-toggle text-primary fw-semibold px-1"
-                href="./pmlabh.html"
-                id="navbarDropdown2"
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="beneficiaryDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-              ></a>
-              <ul class="dropdown-menu dropdown-menu-custom">
+              >
+                <i class="fas fa-users-line me-1"></i> लाभार्थी रजिस्टर
+                <i
+                  class="fas fa-chevron-down ms-1"
+                  style="font-size: 0.8rem"
+                ></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="beneficiaryDropdown">
                 <li>
-                  <a
-                    class="dropdown-item dropdown-item-custom"
-                    href="./pmlabh.html"
+                  <a class="dropdown-item" href="./pmlabh.html"
                     >प्रधानमंत्री आवास योजना</a
                   >
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item dropdown-item-custom"
-                    href="./shabrilabh.html"
+                  <a class="dropdown-item" href="./shabrilabh.html"
                     >शबरी आवास योजना</a
                   >
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item dropdown-item-custom"
-                    href="./ramailabh.html"
+                  <a class="dropdown-item" href="./ramailabh.html"
                     >रमाई आवास योजना</a
                   >
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="./services.html">
-                <i class="fas fa-user-check"></i> नागरिकांसाठी सेवा
+              <a class="nav-link" href="./services.html">
+                <i class="fas fa-user-check me-1"></i> नागरिकांसाठी सेवा
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="./taxcollect.html">
-                <i class="fas fa-money-bill-wave"></i> कर संकलन
+              <a class="nav-link" href="./taxcollect.html">
+                <i class="fas fa-money-bill-wave me-1"></i> कर संकलन
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./complaint.html">
-                <i class="fas fa-comments"></i> तक्रार द्या
+                <i class="fas fa-comments me-1"></i> तक्रार द्या
               </a>
             </li>
           </ul>

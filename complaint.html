@@ -781,25 +781,89 @@
         </div>
       </div>
 
-      <div class="d-flex justify-content-center">
-        <div style="width: 100%; max-width: 800px">
-          <h2 class="text-center mb-3 fw-bold text-primary">
-            📍 आमचा गावाचा नकाशा
-          </h2>
-          <div class="map-responsive">
+      <!-- Replace your current map section with this code -->
+
+<div class="d-flex justify-content-center mt-5">
+    <div style="width: 100%; max-width: 800px">
+        <h2 class="text-center mb-4 fw-bold text-primary">
+            <i class="fas fa-map-marker-alt me-2"></i>📍 आमचा गावाचा नकाशा
+        </h2>
+        <div class="map-responsive">
             <iframe
-              title="Gonde Dumala Village Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27008.781687246705!2d79.9556453376634!3d20.76256885140473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2c824fc2243ceb%3A0x35dcc25c51135179!2sWadegaon%2C%20Maharashtra!5e1!3m2!1sen!2sin!4v1760198588639!5m2!1sen!2sin"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            >
+                title="तेलवडे गावाचा नकाशा | Telwade Village Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.091490929345!2d72.9852136759981!3d18.34667858231944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be84300534ed9f5%3A0x8d6b814be32c606c!2sJay%20Hanuman%20Mandir%20Vavdungi%20varchiwadi!5e0!3m2!1sen!2sin!4v1698765432100!5m2!1sen!2sin"
+                style="border: 0; width: 100%; height: 100%; min-height: 400px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-          </div>
         </div>
-      </div>
-    </section>
+        <div class="text-center mt-3">
+            <p class="text-muted">
+                <i class="fas fa-info-circle me-1"></i>
+                ग्रामपंचायत तेलवडे, ता.मुरुड, जि. रायगड, पिन. ४०२४०१
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+.map-responsive {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--primary-light);
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .map-responsive {
+        height: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .map-responsive {
+        height: 300px;
+    }
+}
+
+/* Add this to your existing CSS */
+.map-responsive:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+}
+</style>
+
+<script>
+// Add this JavaScript for better map handling
+document.addEventListener('DOMContentLoaded', function() {
+    const mapIframe = document.querySelector('.map-responsive iframe');
+    
+    // Add loading indicator
+    mapIframe.addEventListener('load', function() {
+        console.log('Map loaded successfully');
+    });
+    
+    // Handle map errors
+    mapIframe.addEventListener('error', function() {
+        console.error('Failed to load map');
+        // You could show a fallback message here
+    });
+});
+</script>
 
     <!-- Footer -->
     <footer class="footer pt-5">
