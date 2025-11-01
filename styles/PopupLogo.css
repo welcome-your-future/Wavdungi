@@ -110,3 +110,201 @@
     transition: all 0.3s ease;
   }
 }
+/* ---------- Govt Officials Section ---------- */
+.government-officials-container {
+  background: #f8fafc;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-main-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #1e3a8a;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.section-main-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #2563eb;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #475569;
+  margin-bottom: 50px;
+}
+
+.officials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.official-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+}
+
+.official-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.official-image-container {
+  background: #e2e8f0;
+  overflow: hidden;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.official-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: scale 0.4s ease;
+}
+
+.official-card:hover .official-image {
+  scale: 1.05;
+}
+
+.official-content {
+  padding: 20px;
+}
+
+.official-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.official-position-marathi {
+  font-size: 1rem;
+  color: #2563eb;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.official-position-english {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-top: 2px;
+}
+
+.official-department {
+  font-size: 0.9rem;
+  color: #334155;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+.official-divider {
+  width: 50px;
+  height: 3px;
+  background: #2563eb;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* District Section (Optional) */
+.district-section {
+  margin-top: 60px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-main-title {
+    font-size: 2rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  .official-card {
+    max-width: 90%;
+  }
+}
+/* ---------- E-Alert Section ---------- */
+#ealert {
+  background-color: #ade8f4; /* soft sky blue */
+  padding: 50px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+#ealert .service-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#ealert .service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  background-color: #f1f9ff;
+}
+
+#ealert i,
+#ealert .service-icon {
+  transition: transform 0.3s ease;
+}
+
+#ealert .service-card:hover i,
+#ealert .service-card:hover .service-icon {
+  transform: scale(1.15);
+}
+
+#ealert .fw-bold {
+  font-size: 1rem;
+  color: #111827;
+  margin-top: 5px;
+}
+
+#ealert a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#ealert a:hover {
+  color: #2563eb;
+}
+
+/* Make layout flexible and responsive */
+#ealert .row {
+  gap: 20px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  #ealert .service-card {
+    width: 140px;
+    height: 140px;
+    padding: 20px;
+  }
+  #ealert .fw-bold {
+    font-size: 0.9rem;
+  }
+}
